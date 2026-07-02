@@ -1,0 +1,548 @@
+/* ════════════════════════════════════════════════════════════════
+   DIYA — Maison Indo-Persane
+   Charte graphique : Cormorant Garamond (titres) + Inter (textes)
+   Palette : ivoire / or / noir — positionnement galerie d'art
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+    --ivoire:        #faf6ee;
+    --ivoire-fonce:  #f0e9d8;
+    --blanc-chaud:   #fffdf8;
+    --or:            #b8944d;
+    --or-clair:      #d8c294;
+    --noir:          #16130f;
+    --brun:          #3e3323;
+    --texte:         #2b2419;
+    --texte-doux:    #6d6250;
+    --titre: "Cormorant Garamond", Georgia, serif;
+    --corps: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--corps);
+    background-color: var(--ivoire);
+    color: var(--texte);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ─── En-tête & navigation ─────────────────────────────────────── */
+
+.entete {
+    background-color: var(--noir);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 48px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(184, 148, 77, 0.35);
+}
+
+.marque {
+    font-family: var(--titre);
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--or);
+    text-decoration: none;
+    line-height: 1;
+}
+
+.marque span {
+    display: block;
+    font-family: var(--corps);
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--ivoire);
+    margin-top: 6px;
+}
+
+.entete nav {
+    display: flex;
+    gap: 40px;
+}
+
+.entete nav a {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ivoire);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.25s, border-color 0.25s;
+}
+
+.entete nav a:hover,
+.entete nav a.actif {
+    color: var(--or);
+    border-bottom-color: var(--or);
+}
+
+/* ─── Hero plein écran (accueil) ───────────────────────────────── */
+
+.hero {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    background:
+        radial-gradient(ellipse at 50% 30%, rgba(184, 148, 77, 0.22), transparent 60%),
+        linear-gradient(180deg, #1d1810 0%, var(--noir) 100%);
+    color: var(--ivoire);
+}
+
+.hero .surtitre {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--or-clair);
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-family: var(--titre);
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    font-weight: 500;
+    line-height: 1.12;
+    max-width: 900px;
+}
+
+.hero p {
+    font-family: var(--titre);
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+    color: var(--or-clair);
+    margin-top: 24px;
+    max-width: 640px;
+}
+
+.bouton-or {
+    display: inline-block;
+    margin-top: 48px;
+    padding: 16px 46px;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--or);
+    text-decoration: none;
+    border: 1px solid var(--or);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.bouton-or:hover {
+    background-color: var(--or);
+    color: var(--noir);
+}
+
+/* ─── Sections éditoriales (accueil) ───────────────────────────── */
+
+.section-maison {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 110px 24px;
+    text-align: center;
+}
+
+.section-maison h2,
+.titre-section {
+    font-family: var(--titre);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--noir);
+    margin-bottom: 26px;
+}
+
+.filet-or {
+    width: 56px;
+    height: 1px;
+    background-color: var(--or);
+    border: none;
+    margin: 0 auto 34px;
+}
+
+.section-maison p {
+    color: var(--texte-doux);
+    font-size: 1.02rem;
+    font-weight: 300;
+    margin-bottom: 18px;
+}
+
+/* Piliers de la maison (3 colonnes fines) */
+.piliers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 110px;
+    text-align: center;
+}
+
+.pilier h3 {
+    font-family: var(--titre);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.pilier p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--texte-doux);
+}
+
+/* ─── Bandeau de page intérieure ───────────────────────────────── */
+
+.bandeau-page {
+    background-color: var(--noir);
+    text-align: center;
+    padding: 72px 24px 66px;
+    color: var(--ivoire);
+}
+
+.bandeau-page h1 {
+    font-family: var(--titre);
+    font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+    font-weight: 500;
+}
+
+.bandeau-page p {
+    font-family: var(--titre);
+    font-style: italic;
+    font-size: 1.12rem;
+    color: var(--or-clair);
+    margin-top: 12px;
+}
+
+/* ─── Filtres de la collection ─────────────────────────────────── */
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 26px;
+    padding: 42px 24px 8px;
+}
+
+.filtre-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--corps);
+    font-size: 0.74rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texte-doux);
+    padding: 8px 4px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.25s, border-color 0.25s;
+}
+
+.filtre-btn:hover { color: var(--noir); }
+
+.filtre-btn.actif {
+    color: var(--or);
+    border-bottom-color: var(--or);
+}
+
+.compteur-resultats {
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    color: var(--texte-doux);
+    padding: 14px 0 0;
+}
+
+/* ─── Grille de la collection ──────────────────────────────────── */
+
+.grille-produits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 28px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 32px 90px;
+}
+
+.carte-produit {
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--corps);
+    padding: 0;
+}
+
+.carte-produit .visuel {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: var(--ivoire-fonce);
+    margin-bottom: 16px;
+}
+
+.carte-produit .visuel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.carte-produit:hover .visuel img { transform: scale(1.04); }
+
+.carte-produit .matiere {
+    font-size: 0.64rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--or);
+}
+
+.carte-produit h3 {
+    font-family: var(--titre);
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: var(--noir);
+    margin: 6px 0 4px;
+    line-height: 1.3;
+}
+
+.carte-produit .dimensions {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--texte-doux);
+}
+
+.carte-produit .prix {
+    font-family: var(--titre);
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--brun);
+    margin-top: 6px;
+}
+
+/* ─── Modal fiche produit ──────────────────────────────────────── */
+
+.modal-fond {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(22, 19, 15, 0.82);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 200;
+}
+
+.modal-fond.ouvert { display: flex; }
+
+.modal-fiche {
+    background-color: var(--blanc-chaud);
+    max-width: 980px;
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.modal-fermer {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    line-height: 1;
+    color: var(--noir);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modal-visuel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
+.modal-vignettes {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+}
+
+.modal-vignettes img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.modal-vignettes img.active { border-color: var(--or); }
+
+.modal-infos {
+    padding: 48px 42px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-infos .matiere {
+    font-size: 0.66rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--or);
+}
+
+.modal-infos h2 {
+    font-family: var(--titre);
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--noir);
+    margin: 10px 0 16px;
+    line-height: 1.2;
+}
+
+.modal-infos .description {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: var(--texte-doux);
+    margin-bottom: 28px;
+}
+
+.modal-details {
+    border-top: 1px solid var(--ivoire-fonce);
+    font-size: 0.85rem;
+}
+
+.modal-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--ivoire-fonce);
+}
+
+.modal-details dt {
+    color: var(--texte-doux);
+    font-weight: 300;
+}
+
+.modal-details dd { font-weight: 400; text-align: right; }
+
+.modal-infos .prix {
+    font-family: var(--titre);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--brun);
+    margin: 26px 0 6px;
+}
+
+.modal-infos .bouton-or { margin-top: 18px; text-align: center; }
+
+/* ─── Formulaire (contact) ─────────────────────────────────────── */
+
+.bloc-contact {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 80px 24px 110px;
+}
+
+.bloc-contact .intro {
+    text-align: center;
+    color: var(--texte-doux);
+    font-weight: 300;
+    margin-bottom: 48px;
+}
+
+.formulaire label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--brun);
+    margin: 22px 0 8px;
+}
+
+.formulaire input,
+.formulaire textarea {
+    width: 100%;
+    padding: 13px 14px;
+    font-family: var(--corps);
+    font-size: 0.92rem;
+    color: var(--texte);
+    background-color: var(--blanc-chaud);
+    border: 1px solid var(--ivoire-fonce);
+    outline: none;
+    transition: border-color 0.25s;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus { border-color: var(--or); }
+
+.formulaire textarea { min-height: 150px; resize: vertical; }
+
+.formulaire .bouton-or {
+    width: 100%;
+    background: none;
+    cursor: pointer;
+    font-family: var(--corps);
+}
+
+/* ─── Pied de page ─────────────────────────────────────────────── */
+
+.pied {
+    background-color: var(--noir);
+    color: var(--ivoire);
+    text-align: center;
+    padding: 56px 24px 44px;
+}
+
+.pied .marque-pied {
+    font-family: var(--titre);
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+    color: var(--or);
+}
+
+.pied p {
+    font-size: 0.78rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgba(250, 246, 238, 0.65);
+    margin-top: 14px;
+}
+
+/* ─── Responsive ───────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .grille-produits { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .entete { flex-direction: column; gap: 18px; padding: 20px 24px; }
+    .entete nav { gap: 26px; }
+    .piliers { grid-template-columns: 1fr; gap: 40px; }
+    .grille-produits { grid-template-columns: repeat(2, 1fr); gap: 30px 18px; padding: 32px 20px 70px; }
+    .modal-fiche { grid-template-columns: 1fr; max-height: 90vh; }
+    .modal-infos { padding: 30px 24px 40px; }
+}
+
+@media (max-width: 460px) {
+    .grille-produits { grid-template-columns: 1fr; }
+}

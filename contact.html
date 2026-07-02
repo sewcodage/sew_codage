@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Contact & rendez-vous showroom | DIYA, Maison Indo-Persane</title>
+    <meta name="description" content="Contactez DIYA, Maison Indo-Persane, pour une présentation privée de nos tapis noués main : prise de rendez-vous showroom, demande d'information sur une pièce de la collection.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- ─── En-tête ─────────────────────────────────────────────── -->
+    <header class="entete">
+        <a class="marque" href="index.html">DIYA<span>Maison Indo-Persane</span></a>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="produits.html">La Collection</a>
+            <a href="contact.html" class="actif">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ─── Bandeau de page ─────────────────────────────────────── -->
+    <section class="bandeau-page">
+        <h1>Contact</h1>
+        <p>Présentation des pièces sur rendez-vous</p>
+    </section>
+
+    <!-- ─── Formulaire ──────────────────────────────────────────── -->
+    <main class="bloc-contact">
+        <p class="intro">Pour découvrir une pièce de la collection, obtenir une information ou convenir d'un rendez-vous au showroom, laissez-nous un message : nous vous répondons personnellement.</p>
+
+        <!-- Formulaire sans back-end pour l'instant : brancher "action"
+             sur votre traitement (PHP, Formspree...) le moment venu. -->
+        <form class="formulaire" action="#" method="post">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" maxlength="100" required autocomplete="given-name">
+
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" maxlength="100" required autocomplete="family-name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="100" required autocomplete="email">
+
+            <label for="message">Votre message <span style="text-transform:none;">(référence de la pièce, projet, disponibilités...)</span></label>
+            <textarea id="message" name="message" maxlength="1000" required></textarea>
+
+            <button type="submit" class="bouton-or">Envoyer la demande</button>
+        </form>
+    </main>
+
+    <!-- ─── Pied de page ────────────────────────────────────────── -->
+    <footer class="pied">
+        <div class="marque-pied">DIYA</div>
+        <p>Maison Indo-Persane — Tapis artisanaux noués main · Soie · Laine · Point chaîne du Kashmir</p>
+    </footer>
+
+</body>
+</html>
