@@ -1,4 +1,10 @@
-<title>Le surplus et la finalité</title>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Atelier NOVADRINK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap">
@@ -450,6 +456,162 @@ footer{
   *{animation:none!important; transition:none!important; scroll-behavior:auto!important}
 }
 html{scroll-behavior:smooth}
+
+/* ============================================================
+   DOSSIER MULTI-VOLETS — couverture, bannières, pièces du Volet 1
+   ============================================================ */
+
+/* ---------- couverture ---------- */
+.cover{padding:clamp(38px,5vw,62px) 0 clamp(30px,4vw,46px); border-top:0}
+.cover .masthead{
+  display:flex; flex-wrap:wrap; gap:8px 22px; align-items:baseline;
+  padding-bottom:18px; border-bottom:1px solid var(--ink);
+}
+.cover h1{margin:24px 0 0; font-size:clamp(34px,5vw,64px); line-height:.95}
+.cover .h-pink{color:var(--pink)}
+.cover-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(24px,4vw,54px); align-items:end}
+@media (max-width:860px){ .cover-grid{grid-template-columns:1fr; align-items:start} }
+.cover-sub{
+  font-family:var(--f-display); font-weight:500; font-variation-settings:"wdth" 92;
+  font-size:clamp(16px,2vw,21px); line-height:1.34; margin-top:20px; max-width:34ch;
+}
+
+/* sommaire des volets */
+.volets{border-top:1px solid var(--ink); margin-top:clamp(30px,4vw,46px)}
+.vrow{
+  display:grid; grid-template-columns:64px minmax(0,1fr) 150px;
+  gap:10px 20px; align-items:baseline; padding:15px 0;
+  border-bottom:1px solid var(--line-soft); text-decoration:none;
+}
+a.vrow:hover .vr-t{color:var(--pink-ink)}
+.vr-n{font-family:var(--f-mono); font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--mute)}
+.vr-t{font-family:var(--f-display); font-weight:800; font-variation-settings:"wdth" 88; font-size:clamp(19px,2.3vw,25px); letter-spacing:-.012em; line-height:1.1}
+.vr-t small{display:block; font-family:var(--f-body); font-weight:400; font-size:14.5px; color:var(--mute); margin-top:5px; letter-spacing:0; line-height:1.4}
+.vr-s{
+  font-family:var(--f-mono); font-size:9.5px; font-weight:600; letter-spacing:.13em; text-transform:uppercase;
+  border:1px solid currentColor; padding:5px 9px 4px; justify-self:start; white-space:nowrap; line-height:1.2;
+}
+.s-done{color:var(--blue-ink)}
+.s-wait{color:var(--mute)}
+.vrow.wait .vr-t{color:var(--mute)}
+@media (max-width:700px){ .vrow{grid-template-columns:1fr; gap:6px} }
+
+/* clé de lecture des deux encres */
+.key{
+  border:1px solid var(--ink); margin-top:clamp(26px,3.4vw,38px);
+  display:grid; grid-template-columns:1fr 1fr;
+}
+@media (max-width:700px){ .key{grid-template-columns:1fr} }
+.key div{padding:15px 17px; display:flex; flex-direction:column; gap:6px}
+.key div+div{border-left:1px solid var(--line)}
+@media (max-width:700px){ .key div+div{border-left:0; border-top:1px solid var(--line)} }
+.key .kk{font-family:var(--f-mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; display:flex; align-items:center; gap:9px}
+.key .kk::before{content:""; width:26px; height:9px; display:inline-block; background:currentColor}
+.key .k-blue .kk{color:var(--blue-ink)}
+.key .k-pink .kk{color:var(--pink-ink)}
+.key p{font-size:14.5px; line-height:1.45; color:var(--mute)}
+
+/* ---------- bannière de volet ---------- */
+.volet-open{padding:clamp(50px,6vw,80px) 0 clamp(28px,3.4vw,40px); border-top:2px solid var(--ink)}
+.v-tag{
+  font-family:var(--f-mono); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--paper); background:var(--ink); padding:6px 11px 5px; display:inline-block; line-height:1;
+}
+.volet-open h2{font-size:clamp(30px,4.6vw,54px); margin-top:18px; font-variation-settings:"wdth" 84}
+.volet-open .v-sub{
+  font-family:var(--f-display); font-weight:500; font-variation-settings:"wdth" 92;
+  font-size:clamp(16px,1.9vw,20px); line-height:1.34; margin-top:16px; max-width:46ch;
+}
+
+/* ---------- corpus des 24 commentaires ---------- */
+.corpus{display:grid; grid-template-columns:repeat(8,1fr); gap:5px}
+@media (max-width:820px){ .corpus{grid-template-columns:repeat(6,1fr)} }
+@media (max-width:520px){ .corpus{grid-template-columns:repeat(4,1fr)} }
+.c{
+  border:1px solid var(--line); background:var(--surface);
+  padding:9px 6px 8px; text-align:center; position:relative;
+  font-family:var(--f-mono); font-size:12.5px; font-weight:600; color:var(--mute);
+}
+.c small{display:block; font-size:8px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; margin-top:5px; opacity:.85}
+.c-desinf{background:var(--pink-wash); border-color:var(--pink); color:var(--pink-ink)}
+.c-crit{background:var(--blue-wash); border-color:var(--blue); color:var(--blue-ink)}
+.c-exp{background:var(--surface); border-color:var(--blue); color:var(--blue-ink)}
+.c-comp{background:var(--surface); border-color:var(--ink); color:var(--ink)}
+.c-def{background:var(--surface-2); border-color:var(--line); color:var(--mute)}
+.c-troll{background:var(--surface); border-color:var(--line-soft); color:var(--mute)}
+.c.moved::after{
+  content:"▸"; position:absolute; top:2px; right:4px;
+  font-size:11px; color:var(--pink); line-height:1;
+}
+
+/* ---------- reclassement : avant / après ---------- */
+.shift{display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(12px,2.4vw,26px); align-items:stretch}
+@media (max-width:760px){ .shift{grid-template-columns:1fr} .shift .arrow{justify-self:start; padding:4px 0} }
+.box{border:1px solid var(--line); padding:15px 16px; display:flex; flex-direction:column; gap:9px}
+.box.before{border-color:var(--pink)}
+.box.after{border-color:var(--blue)}
+.box .bh{font-family:var(--f-mono); font-size:9.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--mute)}
+.box.before .bh{color:var(--pink-ink)}
+.box.after .bh{color:var(--blue-ink)}
+.box .bt{font-family:var(--f-display); font-weight:700; font-variation-settings:"wdth" 92; font-size:16.5px; line-height:1.2}
+.box ul{margin:0; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:6px}
+.box li{font-size:14px; line-height:1.4; color:var(--mute); padding-left:15px; text-indent:-15px}
+.box li b{font-family:var(--f-mono); font-size:12px; color:var(--ink); font-weight:600}
+.arrow{align-self:center; font-family:var(--f-mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--mute)}
+
+/* ---------- verdict ---------- */
+.verdict-block{
+  border:1px solid var(--pink); background:var(--pink-wash);
+  padding:clamp(18px,2.4vw,26px); display:flex; flex-direction:column; gap:10px;
+  margin:clamp(22px,3vw,30px) 0;
+}
+.verdict-block .vh{font-family:var(--f-mono); font-size:9.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--pink-ink)}
+.verdict-block .vv{
+  font-family:var(--f-display); font-weight:800; font-variation-settings:"wdth" 86;
+  font-size:clamp(23px,3.2vw,34px); line-height:1.08; letter-spacing:-.015em; color:var(--pink-ink);
+}
+.verdict-block p{font-size:16px; line-height:1.5; max-width:72ch}
+
+/* ---------- le tweet ---------- */
+.tweet{
+  border:1px solid var(--ink); background:var(--surface);
+  max-width:560px; display:flex; flex-direction:column;
+}
+.tweet-top{
+  border-bottom:1px solid var(--line); padding:12px 16px;
+  display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+}
+.tweet-av{
+  width:30px; height:30px; background:var(--blue); color:var(--paper);
+  font-family:var(--f-display); font-weight:800; font-size:13px;
+  display:grid; place-items:center; align-self:center; flex:none;
+}
+.tweet-id{font-family:var(--f-display); font-weight:700; font-variation-settings:"wdth" 94; font-size:15px; line-height:1.2}
+.tweet-id span{display:block; font-family:var(--f-mono); font-size:10px; font-weight:400; color:var(--mute); letter-spacing:.06em; margin-top:2px}
+.tweet-body{padding:16px; font-size:16px; line-height:1.5}
+.tweet-foot{
+  border-top:1px solid var(--line); padding:11px 16px;
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--blue-ink); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.gauge{height:4px; background:var(--surface-2); margin-top:10px; max-width:560px; position:relative}
+.gauge i{display:block; height:100%; background:var(--blue); width:88.2%}
+.gauge b{
+  position:absolute; right:0; top:8px; font-family:var(--f-mono); font-size:9.5px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--mute); font-weight:500;
+}
+
+/* ---------- rail : groupes ---------- */
+.rail nav h5{
+  font-family:var(--f-mono); font-size:9px; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink); margin:16px 0 5px; padding-left:9px;
+}
+.rail nav h5:first-child{margin-top:0}
+.rail nav h5.soon{color:var(--mute)}
+@media (max-width:1000px){
+  .rail nav h5{margin:0 10px 0 4px; align-self:center; padding-left:0; white-space:nowrap}
+}
+
 </style>
 
 <div class="grain" aria-hidden="true"></div>
@@ -458,10 +620,19 @@ html{scroll-behavior:smooth}
 
   <aside class="rail">
     <div class="rail-mark">
-      <b>Volet 3 · CRM</b>
-      <span>NOVADRINK — Atelier Culture IA</span>
+      <b>Atelier NOVADRINK</b>
+      <span>Culture IA — dossier en 4 volets</span>
     </div>
     <nav id="nav" aria-label="Sommaire">
+      <h5>Volet 1 — E-réputation X</h5>
+      <a href="#v1s1"><i>01</i>La crise</a>
+      <a href="#v1s2"><i>02</i>Prompts P1 → P2</a>
+      <a href="#v1s3"><i>03</i>Les 24 réponses</a>
+      <a href="#v1s4"><i>04</i>Le biais corrigé</a>
+      <a href="#v1s5"><i>05</i>Fact-check</a>
+      <a href="#v1s6"><i>06</i>Le tweet</a>
+      <a href="#v1s7"><i>07</i>Critique de l’IA</a>
+      <h5>Volet 3 — CRM / Emailing</h5>
       <a href="#s1"><i>01</i>Problématique</a>
       <a href="#s2"><i>02</i>Cadre théorique</a>
       <a href="#s3"><i>03</i>Critère de tri</a>
@@ -472,20 +643,521 @@ html{scroll-behavior:smooth}
       <a href="#s8"><i>08</i>Risques</a>
       <a href="#s9"><i>09</i>Conclusion</a>
       <a href="#s10"><i>10</i>Bibliographie</a>
+      <h5 class="soon">Volets 2 et 4 — en attente</h5>
     </nav>
     <div class="rail-foot">Kishan — EFREI Paris</div>
   </aside>
 
   <main class="main">
 
-    <!-- ════════ HERO ════════ -->
-    <section class="hero">
-      <div class="hero-meta">
-        <span class="eyebrow">Volet 3 — CRM / Emailing</span>
+    <!-- ════════ COUVERTURE DU DOSSIER ════════ -->
+    <section class="cover">
+      <div class="masthead">
         <span class="eyebrow">Atelier NOVADRINK · Culture IA</span>
-        <span class="eyebrow">Kishan · Bachelor Management &amp; Stratégie Digitale</span>
+        <span class="eyebrow">Kishan · EFREI Paris</span>
+        <span class="eyebrow">Bachelor Management &amp; Stratégie Digitale</span>
       </div>
 
+      <div class="cover-grid">
+        <div>
+          <h1>L’IA applique un critère.<br><span class="h-pink">Elle ne le construit pas.</span></h1>
+          <p class="cover-sub">Deux volets, deux crises différentes, une même conclusion : le modèle exécute vite ce qu’on lui a formulé, et ne formule rien à notre place.</p>
+        </div>
+        <div class="thesis">
+          <span class="q">Le fil du dossier</span>
+          <p>Sur X, l’IA a rangé les commentaires <strong>par langue</strong> au lieu de les ranger par contenu. Sur la base CRM, elle a traité une donnée de santé comme <strong>un motif de personnalisation</strong>. Aucune des deux erreurs n’est une désobéissance : ce sont deux obéissances littérales à un prompt qui ne disait pas assez.</p>
+        </div>
+      </div>
+
+      <div class="volets">
+        <a class="vrow" href="#v1">
+          <span class="vr-n">Volet 1</span>
+          <span class="vr-t">E-réputation sur X<small>Accusation de greenwashing, 24 commentaires à classer, un fact-check et un tweet de réponse.</small></span>
+          <span class="vr-s s-done">Intégré</span>
+        </a>
+        <div class="vrow wait">
+          <span class="vr-n">Volet 2</span>
+          <span class="vr-t">À intégrer<small>Le document n’a pas encore été fourni.</small></span>
+          <span class="vr-s s-wait">En attente</span>
+        </div>
+        <a class="vrow" href="#v3">
+          <span class="vr-n">Volet 3</span>
+          <span class="vr-t">CRM / Emailing<small>Personnaliser une campagne sans exploiter les données de santé déposées spontanément.</small></span>
+          <span class="vr-s s-done">Intégré</span>
+        </a>
+        <div class="vrow wait">
+          <span class="vr-n">Volet 4</span>
+          <span class="vr-t">À intégrer<small>Le document n’a pas encore été fourni.</small></span>
+          <span class="vr-s s-wait">En attente</span>
+        </div>
+      </div>
+
+      <div class="key">
+        <div class="k-blue">
+          <span class="kk">Encre 1 — vérifié, retenu</span>
+          <p>Ce qui repose sur un fait contrôlable : une fiche technique, une trace transactionnelle, une catégorie tenue par le contenu.</p>
+        </div>
+        <div class="k-pink">
+          <span class="kk">Encre 2 — écarté, non vérifié</span>
+          <p>Ce qu’il faut refuser d’utiliser tel quel : une affirmation sans source, un surplus déposé hors finalité, un classement produit par le modèle seul.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ BANNIÈRE VOLET 1 ════════ -->
+    <section class="volet-open" id="v1">
+      <span class="v-tag">Volet 1</span>
+      <h2>E-réputation sur X / Twitter</h2>
+      <p class="v-sub">NOVADRINK est accusée de greenwashing sur la recyclabilité de ses bouteilles. Le tweet d’origine prend de l’ampleur et suscite de nombreuses réactions, y compris en anglais et en espagnol.</p>
+
+      <div class="figures">
+        <div><span class="fig-n">24</span><span class="fig-l">commentaires<br>à classer</span></div>
+        <div class="is-pink"><span class="fig-n">5</span><span class="fig-l">reclassés après<br>correction du biais</span></div>
+        <div class="is-blue"><span class="fig-n">5</span><span class="fig-l">étapes<br>de fact-check</span></div>
+        <div class="is-blue"><span class="fig-n">247</span><span class="fig-l">caractères<br>de réponse publique</span></div>
+      </div>
+    </section>
+
+    <!-- ════════ V1 · 01 ════════ -->
+    <section id="v1s1">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <div>
+          <h2>La crise et la fiche technique</h2>
+          <p>Trois lignes de données internes décident de tout le fact-check. Elles sont la seule source primaire disponible.</p>
+        </div>
+      </div>
+
+      <div class="col prose">
+        <p class="lead">L’accusation est que NOVADRINK ferait du greenwashing en présentant ses bouteilles comme recyclables alors qu’elles ne le seraient pas totalement. <strong>Le mot « bouteille » recouvre en réalité trois objets distincts</strong>, et c’est cette confusion qui fabrique la crise.</p>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">La fiche technique interne</span>
+          <span class="n">Planche 01 — trois éléments, trois filières</span>
+        </div>
+        <div class="sorter">
+          <div class="field">
+            <div class="f-n">corps — PET</div>
+            <div class="f-s">Recyclable à 100 %, logo Triman</div>
+            <div class="verdict v-yes">Recyclable</div>
+          </div>
+          <div class="field hold">
+            <div class="f-n">bouchon — PP</div>
+            <div class="f-s">Filière séparée, non pris en charge par le tri sélectif standard dans plusieurs communes françaises</div>
+            <div class="verdict v-hold">Sous condition</div>
+          </div>
+          <div class="field no">
+            <div class="f-n">étiquette</div>
+            <div class="f-s">Doit être retirée avant recyclage, non recyclable en l’état</div>
+            <div class="verdict v-no">Non recyclable</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="call">
+        <span class="eyebrow">Ce que la fiche impose · 3.1</span>
+        <p>Il faut donc distinguer <strong>deux questions</strong>, et non une : le corps de la bouteille est-il recyclable ? Et l’ensemble du packaging l’est-il dans les mêmes conditions ? L’accusation confond les deux — mais une défense qui les confondrait aussi serait tout aussi trompeuse.</p>
+      </div>
+    </section>
+
+    <!-- ════════ V1 · 02 ════════ -->
+    <section id="v1s2">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <div>
+          <h2>Prompts et itération</h2>
+          <p>Deux versions. La première laisse le modèle choisir ses catégories, la seconde lui retire ce choix.</p>
+        </div>
+      </div>
+
+      <div class="ladder">
+        <div class="step f">
+          <div class="step-v">P1<small>L’ouverture</small></div>
+          <div>
+            <h3>Un rôle, un contexte, quatre missions — et aucune contrainte de méthode</h3>
+<pre class="v1">Tu es un expert en communication de crise et en e-réputation.
+La marque NOVADRINK est accusée de greenwashing sur X (Twitter)
+concernant la recyclabilité de ses bouteilles. Le tweet d'origine
+prend de l'ampleur et suscite de nombreuses réactions, y compris
+en anglais et en espagnol.
+
+Données internes :
+- Bouteille en PET 100 % recyclable (Triman).
+- Bouchon en PP (filière séparée, non pris en charge partout).
+- Étiquette non recyclable à enlever.
+
+Données :
+[Coller les commentaires C1 à C24]
+
+Mission :
+1. Analyse et classifie les commentaires selon leur typologie
+   et leur niveau de risque.
+2. Effectue un fact-checking de l'accusation de greenwashing
+   avec la méthode en 5 étapes.
+3. Propose une réponse pour NOVADRINK sur Twitter
+   (format tweet de 280 caractères max).
+4. Explique comment traiter les commentaires internationaux
+   et donne un regard critique sur l'usage de l'IA.</pre>
+            <div class="call pink">
+              <span class="eyebrow">Le biais produit par le P1</span>
+              <p>« Explique comment traiter les commentaires <em>internationaux</em> » a suffi. Le modèle en a fait <strong>une catégorie de classement</strong> — « Réactions internationales » — et y a rangé les commentaires anglais et espagnols au lieu de les analyser par contenu. Il n’a rien transgressé : il a repris le mot du prompt comme une consigne de tri.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="step p">
+          <div class="step-v">P2<small>La correction</small></div>
+          <div>
+            <h3>Correction et affinage : cinq consignes qui retirent au modèle le choix de la structure</h3>
+            <div class="prompt">
+              <div class="p-h">1 — <b>Restructuration de la classification</b></div>
+<pre><b>· Supprime la catégorie « Réactions internationales » :
+  classe l'intégralité des commentaires (C1 à C24) par type
+  de contenu dans un tableau synthétique avec code couleur
+  et gestion recommandée.
+  Intègre C19 et C22 dans « Désinformation », C21 dans
+  « Critique légitime », C20 et C23 dans « Défense de la marque ».</b>
+· Ajoute des notes explicatives pour justifier le classement
+  de C2 (défense factuelle) et C13 (sarcasme), et justifie
+  l'abandon de la catégorie par langue.</pre>
+              <div class="p-h">2 — Gestion linguistique (anglais / espagnol)</div>
+<pre>· Explicite la nécessité de traduire avant de classer pour
+  saisir l'émotion et les nuances (« Classic greenwashing »,
+  « dejen de atacarla »), et préconise une réponse dans la
+  langue d'origine.</pre>
+              <div class="p-h">3 — Fact-checking approfondi (méthode en 5 étapes)</div>
+<pre>· Étape 1 : Distingue bien la recyclabilité du corps de la
+  bouteille de celle du packaging complet.
+· Étape 2 : Rappelle factuellement la fiche technique interne
+  (PET, PP, étiquette).
+· Étape 3 : Compare l'affirmation aux faits réels
+  (affirmation trop générale vs réalité technique).
+· Étape 4 : Analyse spécifiquement les affirmations
+  secondaires inexactes (C3, C6, C9, C14, C16, C19/C22).
+· Étape 5 : Conclus avec le verdict « Partiellement vrai /
+  formulation trompeuse » en insistant sur le fait que la
+  responsabilité de la confusion incombe à NOVADRINK
+  (défaut de clarté) et non aux consommateurs.</pre>
+              <div class="p-h">4 — Réponse officielle sur X</div>
+<pre>· Rédige un SEUL tweet (court, sobre, transparent, sans
+  agressivité ni justification excessive).
+· Calibre-le sous la barre des 280 caractères (environ
+  245-250 caractères pour sécuriser l'encodage des émojis).</pre>
+              <div class="p-h">5 — Critique argumentée de l’IA</div>
+<pre>· Détaille les limites réelles du modèle constatées durant
+  l'exercice : mauvaise appréhension du sarcasme (C4, C7,
+  C13, C15), risque d'ingérer de faux chiffres (C9), biais
+  de silotage par langue, et incapacité à vérifier sans
+  documents primaires internes.</pre>
+            </div>
+            <p style="margin-top:14px" class="col">La consigne décisive est la première : <strong>elle nomme les commentaires à déplacer, un par un.</strong> Laisser le modèle « mieux classer » n’aurait rien donné — il aurait reproduit sa catégorie par langue sous un autre nom, exactement comme le V2 du Volet 3 a proposé « clients attentifs au sucre » après l’interdiction du mot « diabète ».</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ V1 · 03 ════════ -->
+    <section id="v1s3">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <div>
+          <h2>Classification des 24 réponses</h2>
+          <p>Six catégories tenues par le contenu, un niveau de sensibilité, une gestion recommandée. Aucune catégorie par langue.</p>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Le corpus entier</span>
+          <span class="n">Planche 02 — 24 commentaires · ▸ = reclassé au P2</span>
+        </div>
+        <div class="corpus">
+          <div class="c c-crit">C1<small>Critique</small></div>
+          <div class="c c-def">C2<small>Défense</small></div>
+          <div class="c c-desinf">C3<small>Désinf.</small></div>
+          <div class="c c-troll">C4<small>Troll</small></div>
+          <div class="c c-def">C5<small>Défense</small></div>
+          <div class="c c-desinf">C6<small>Désinf.</small></div>
+          <div class="c c-troll">C7<small>Troll</small></div>
+          <div class="c c-crit">C8<small>Critique</small></div>
+          <div class="c c-desinf">C9<small>Désinf.</small></div>
+          <div class="c c-comp">C10<small>Comparaison</small></div>
+          <div class="c c-def">C11<small>Défense</small></div>
+          <div class="c c-crit">C12<small>Critique</small></div>
+          <div class="c c-troll">C13<small>Troll</small></div>
+          <div class="c c-desinf">C14<small>Désinf.</small></div>
+          <div class="c c-troll">C15<small>Troll</small></div>
+          <div class="c c-exp">C16<small>Expertise</small></div>
+          <div class="c c-comp">C17<small>Comparaison</small></div>
+          <div class="c c-crit">C18<small>Critique</small></div>
+          <div class="c c-desinf moved">C19<small>Désinf.</small></div>
+          <div class="c c-def moved">C20<small>Défense</small></div>
+          <div class="c c-crit moved">C21<small>Critique</small></div>
+          <div class="c c-desinf moved">C22<small>Désinf.</small></div>
+          <div class="c c-def moved">C23<small>Défense</small></div>
+          <div class="c c-crit">C24<small>Critique</small></div>
+        </div>
+        <div class="legend">
+          <span><i class="swatch s-san"></i>Désinformation — forte sensibilité</span>
+          <span><i class="swatch" style="background:var(--blue-wash); border-color:var(--blue)"></i>Critique légitime</span>
+          <span><i class="swatch" style="border-color:var(--blue)"></i>Expertise technique</span>
+          <span><i class="swatch" style="border-color:var(--ink)"></i>Comparaison / déplacement</span>
+          <span><i class="swatch" style="background:var(--surface-2)"></i>Défense de la marque</span>
+          <span><i class="swatch"></i>Troll / sarcasme</span>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Gestion recommandée par catégorie</span>
+          <span class="n">Planche 03 — ce qu’on répond, et à qui</span>
+        </div>
+        <div class="scroller">
+          <table>
+            <thead>
+              <tr><th>Catégorie</th><th>Réponses</th><th>Sensibilité</th><th>Gestion recommandée</th></tr>
+            </thead>
+            <tbody>
+              <tr class="flag">
+                <td><span class="k">Désinformation / affirmation non vérifiée</span></td>
+                <td><span class="m pink">C3, C6, C9, C14, C19, C22</span></td>
+                <td><span class="m pink">🔴 Forte</span></td>
+                <td>Vérifier les faits avant de répondre et corriger publiquement, sans agressivité</td>
+              </tr>
+              <tr>
+                <td><span class="k">Critique légitime</span></td>
+                <td><span class="m blue">C1, C8, C12, C18, C21, C24</span></td>
+                <td><span class="m">Moyenne / forte</span></td>
+                <td>Répondre avec transparence, apporter des preuves et reconnaître les interrogations</td>
+              </tr>
+              <tr>
+                <td><span class="k">Comparaison / déplacement du débat</span></td>
+                <td><span class="m">C10, C17</span></td>
+                <td><span class="m">Moyenne</span></td>
+                <td>Recentrer la discussion sur NOVADRINK et les faits concernant son packaging</td>
+              </tr>
+              <tr>
+                <td><span class="k">Expertise / information technique</span></td>
+                <td><span class="m blue">C16</span></td>
+                <td><span class="m">Moyenne</span></td>
+                <td>Valoriser l’apport technique et compléter avec les informations officielles</td>
+              </tr>
+              <tr>
+                <td><span class="k">Défense de la marque</span></td>
+                <td><span class="m">C2, C5, C11, C20, C23</span></td>
+                <td><span class="m">Faible</span></td>
+                <td>Remercier, mais ne pas encourager une confrontation avec les critiques</td>
+              </tr>
+              <tr>
+                <td><span class="k">Troll / sarcasme / moquerie</span></td>
+                <td><span class="m">C4, C7, C13, C15</span></td>
+                <td><span class="m">Faible</span></td>
+                <td>Ne pas alimenter le conflit. Répondre uniquement si une information importante doit être corrigée</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col prose">
+        <h3>Deux notes de classement qui ne vont pas de soi</h3>
+        <p><span class="tag">C2 → Défense de la marque.</span> « J’ai vérifié le logo Triman, arrêtez de raconter n’importe quoi » est une réaction <em>factuelle</em> qui prend la défense de NOVADRINK sur la base d’une vérification personnelle. Le ton est agressif, le contenu ne l’est pas — et c’est le contenu qui classe.</p>
+        <p><span class="tag">C13 → Troll / sarcasme.</span> « Naturel, premium, responsable… on connaît la chanson » est une remarque cynique sur le marketing en général, sans accusation factuelle précise à traiter. Rien à corriger, donc rien à répondre.</p>
+      </div>
+    </section>
+
+    <!-- ════════ V1 · 04 ════════ -->
+    <section id="v1s4">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <div>
+          <h2>Le biais corrigé : classer par contenu, pas par langue</h2>
+          <p>La catégorie « Réactions internationales » mélangeait deux logiques de classement. C’est la correction la plus structurante du volet.</p>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Le reclassement</span>
+          <span class="n">Planche 04 — une catégorie supprimée, cinq commentaires redistribués</span>
+        </div>
+        <div class="shift">
+          <div class="box before">
+            <span class="bh">Sortie du P1</span>
+            <span class="bt">« Réactions internationales »</span>
+            <ul>
+              <li><b>C19</b> — « Classic greenwashing » (anglais)</li>
+              <li><b>C20</b> — défense de la marque (anglais)</li>
+              <li><b>C21</b> — mise en garde sur l’ampleur (anglais)</li>
+              <li><b>C22</b> — « dejen de atacarla » (espagnol)</li>
+              <li><b>C23</b> — défense de la marque (espagnol)</li>
+            </ul>
+          </div>
+          <div class="arrow">reclassés</div>
+          <div class="box after">
+            <span class="bh">Après le P2 — par contenu</span>
+            <span class="bt">Trois catégories existantes</span>
+            <ul>
+              <li><b>C19, C22</b> → Désinformation, au même titre que C6, qu’ils reformulent</li>
+              <li><b>C21</b> → Critique légitime : elle appelle à une réponse rapide sans avancer de fausse affirmation</li>
+              <li><b>C20, C23</b> → Défense de la marque, comme les commentaires français équivalents</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="call blue">
+        <span class="eyebrow">Pourquoi la catégorie était fausse</span>
+        <h3>Deux logiques de classement dans un même tableau</h3>
+        <p>Les autres catégories classent <strong>par type de contenu</strong> ; celle-ci classait <strong>par langue</strong>. Or C20 et C23 étaient déjà rangés ailleurs par contenu — il fallait faire la même chose pour C19, C21 et C22. La gestion propre à la langue (traduction, nuance) reste traitée séparément, pas dans la classification.</p>
+      </div>
+
+      <div class="col prose">
+        <h3>Traduire avant de classer</h3>
+        <p>Pour les commentaires en anglais et en espagnol, la traduction doit être réalisée <em>avant</em> la classification, afin de conserver le sens, le ton et l’intention du message. Il faut cependant éviter de prendre une traduction automatique pour vérité absolue : « Classic greenwashing » ou « dejen de atacarla » possèdent une dimension émotionnelle qui peut être <strong>atténuée ou amplifiée selon la traduction</strong>.</p>
+        <p>Dans le livrable, les commentaires ont donc été traduits pour faciliter l’analyse, tout en conservant leur formulation originale comme référence. Pour une réponse publique, NOVADRINK devrait idéalement répondre directement dans la langue utilisée par l’internaute.</p>
+      </div>
+    </section>
+
+    <!-- ════════ V1 · 05 ════════ -->
+    <section id="v1s5">
+      <div class="sec-head">
+        <span class="sec-num">05</span>
+        <div>
+          <h2>Fact-check en cinq étapes</h2>
+          <p>De l’affirmation à un verdict assorti d’un niveau de certitude — et d’une attribution de responsabilité.</p>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">La méthode</span>
+          <span class="n">Planche 05 — cinq étapes, un verdict</span>
+        </div>
+        <div class="ladder">
+          <div class="step p">
+            <div class="step-v">1<small>Identifier</small></div>
+            <div>
+              <h3>Identifier précisément l’affirmation</h3>
+              <p style="margin-top:6px; max-width:72ch">NOVADRINK ferait du greenwashing en présentant ses bouteilles comme recyclables alors qu’elles ne le seraient pas totalement. Deux questions distinctes s’y cachent : le corps est-il recyclable, et le packaging entier l’est-il dans les mêmes conditions ?</p>
+            </div>
+          </div>
+          <div class="step p">
+            <div class="step-v">2<small>Vérifier</small></div>
+            <div>
+              <h3>Identifier les éléments vérifiables</h3>
+              <p style="margin-top:6px; max-width:72ch">La fiche technique interne, seule source primaire : corps en PET recyclable à 100 % avec logo Triman ; bouchon en PP recyclable par filière séparée mais hors tri sélectif standard dans plusieurs communes ; étiquette à retirer, non recyclable en l’état.</p>
+            </div>
+          </div>
+          <div class="step p">
+            <div class="step-v">3<small>Comparer</small></div>
+            <div>
+              <h3>Comparer l’affirmation avec les faits</h3>
+              <p style="margin-top:6px; max-width:72ch">« La bouteille n’est pas recyclable » est <strong>trop générale</strong>. Le corps l’est bien. Mais dire que tout le packaging est recyclable serait <strong>également trompeur</strong>. Le problème porte sur la formulation et la compréhension de la recyclabilité, pas sur le PET lui-même.</p>
+            </div>
+          </div>
+          <div class="step f">
+            <div class="step-v">4<small>Secondaires</small></div>
+            <div>
+              <h3>Vérifier les affirmations secondaires</h3>
+              <div class="finds" style="margin-top:8px">
+                <div class="find"><span class="i">C3</span><p>Toutes les bouteilles finissent dans l’océan — <b>affirmation beaucoup trop générale.</b></p></div>
+                <div class="find"><span class="i">C6</span><p>Le bouchon n’est pas recyclable — <b>inexact</b>, il l’est via une filière séparée.</p></div>
+                <div class="find"><span class="i">C9</span><p>Le chiffre de 90 % — <b>avancé sans source vérifiable.</b></p></div>
+                <div class="find"><span class="i">C14</span><p>Les ingrédients seraient également faux — <b>aucun lien logique</b> avec le problème de packaging.</p></div>
+                <div class="find"><span class="i">C16</span><p>Précision technique <b>cohérente avec la fiche interne</b> : le PET est techniquement recyclable.</p></div>
+                <div class="find"><span class="i">C19<br>C22</span><p>Reformulent l’accusation sur le bouchon dans une autre langue, <b>sans apporter de nouvel élément factuel.</b></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="step p">
+            <div class="step-v">5<small>Conclure</small></div>
+            <div>
+              <h3>Conclure avec un niveau de certitude</h3>
+              <div class="verdict-block">
+                <span class="vh">Verdict</span>
+                <span class="vv">Partiellement vrai / formulation trompeuse</span>
+                <p>Le corps en PET est recyclable, mais le packaging dans son ensemble nécessite des conditions particulières : le bouchon passe par une filière séparée et l’étiquette doit être retirée. L’accusation ne peut pas être confirmée à partir des seules informations disponibles.</p>
+              </div>
+              <p class="col" style="max-width:72ch"><strong>La responsabilité de cette confusion revient à NOVADRINK, pas aux internautes qui l’ont relayée.</strong> C’est la communication de la marque qui doit être suffisamment précise pour ne pas laisser entendre que chaque élément du packaging est recyclable de la même manière. Ce n’est pas aux consommateurs de deviner la nuance entre le corps, le bouchon et l’étiquette — c’est à NOVADRINK de la rendre explicite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ V1 · 06 ════════ -->
+    <section id="v1s6">
+      <div class="sec-head">
+        <span class="sec-num">06</span>
+        <div>
+          <h2>La réponse officielle</h2>
+          <p>Un seul tweet. Un fil long donnerait l’impression que la marque cherche à se justifier excessivement.</p>
+        </div>
+      </div>
+
+      <article class="tweet">
+        <div class="tweet-top">
+          <span class="tweet-av">N</span>
+          <span class="tweet-id">NOVADRINK<span>@novadrink · réponse publique</span></span>
+        </div>
+        <div class="tweet-body">
+          Nous avons vu les échanges concernant notre packaging. Pour être transparents : notre bouteille en PET est recyclable. Le bouchon suit une filière séparée et l’étiquette doit être retirée. Nous allons clarifier ces informations sur nos supports. ♻
+        </div>
+        <div class="tweet-foot"><span>Un seul tweet, pas de fil</span><span>~247 / 280 caractères</span></div>
+      </article>
+      <div class="gauge"><i></i><b>marge conservée pour l’encodage de l’émoji</b></div>
+
+      <div class="col prose" style="margin-top:34px">
+        <p>La réponse est <strong>volontairement factuelle, courte et transparente</strong>. Elle ne traite pas les internautes d’erreurs et ne nie pas le problème de compréhension autour du packaging. Le calibrage à ~247 caractères plutôt qu’à 280 est délibéré : l’émoji ♻ peut compter pour plusieurs caractères selon l’encodage, et le compte doit être refait au moment du rendu.</p>
+      </div>
+    </section>
+
+    <!-- ════════ V1 · 07 ════════ -->
+    <section id="v1s7">
+      <div class="sec-head">
+        <span class="sec-num">07</span>
+        <div>
+          <h2>Critique de l’analyse par IA</h2>
+          <p>Quatre limites constatées pendant l’exercice, et une conclusion sur le partage des rôles.</p>
+        </div>
+      </div>
+
+      <div class="col prose">
+        <p>L’IA est utile pour traiter rapidement un volume important de réactions : regrouper les commentaires par catégories, détecter les sentiments dominants, identifier vite les messages nécessitant une réponse. <strong>Son analyse présente cependant quatre limites.</strong></p>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Ce que l’IA a manqué</span>
+          <span class="n">Planche 06 — quatre limites constatées</span>
+        </div>
+        <div class="finds">
+          <div class="find"><span class="i">01</span><p><b>L’ironie et le second degré.</b> Notamment sur C4, C7, C13 et C15 : un commentaire sarcastique peut être interprété comme une critique sérieuse — et déclencher une réponse là où il ne fallait pas alimenter le conflit.</p></div>
+          <div class="find"><span class="i">02</span><p><b>Elle n’est pas une source de vérité.</b> C9 avance un chiffre de 90 % sur le recyclage des bouteilles. L’IA pourrait reprendre cette information alors qu’aucune source n’est fournie.</p></div>
+          <div class="find"><span class="i">03</span><p><b>La traduction déplace le niveau d’agressivité.</b> Une traduction automatique peut modifier la nuance d’un commentaire anglais ou espagnol comme C19 ou C22 — d’où le contrôle humain obligatoire. Le classement initial par « langue » plutôt que par contenu illustrait exactement ce risque : l’IA tend à isoler les commentaires non francophones dans un groupe à part, alors qu’ils doivent être analysés avec les mêmes critères que les autres.</p></div>
+          <div class="find"><span class="i">04</span><p><b>Elle qualifie une affirmation de « fausse » sans accès aux sources primaires.</b> Ici, la fiche technique interne est indispensable pour distinguer la recyclabilité du PET, celle du bouchon et les contraintes liées à l’étiquette. Sans elle, le verdict n’est qu’une opinion bien formulée.</p></div>
+        </div>
+      </div>
+
+      <div class="call pink">
+        <span class="eyebrow">Conclusion du volet 1</span>
+        <h3>Un outil d’aide à l’analyse, jamais la décision</h3>
+        <p>La décision finale doit rester humaine, <strong>particulièrement dans une crise d’e-réputation</strong>, où la communication est susceptible d’avoir un impact durable sur l’image de marque. C’est la même conclusion que le Volet 3 atteint par un autre chemin : l’IA applique correctement un critère qu’on lui fournit, elle ne le construit pas.</p>
+      </div>
+    </section>
+
+    <!-- ════════ BANNIÈRE VOLET 3 ════════ -->
+    <section class="volet-open" id="v3">
+      <span class="v-tag">Volet 3</span>
+      <h2>CRM / Emailing</h2>
+      <p class="v-sub">Personnaliser une communication client sans exploiter ce que le client a livré en dehors de la finalité pour laquelle il l’a livré — et mesurer ce qu’on perd en s’en abstenant.</p>
+    </section>
+
+    <!-- ════════ HERO ════════ -->
+    <section class="hero" style="padding-top:0">
       <div class="hero-grid">
         <div>
           <h1>Le surplus<br>et la <span class="h-pink">finalité</span></h1>
@@ -1111,9 +1783,9 @@ Puis la liste de ce que tu n'as volontairement pas utilisé.</pre>
     </section>
 
     <footer>
-      <span>Volet 3 — CRM / Emailing · NOVADRINK</span>
+      <span>Atelier NOVADRINK · Culture IA</span>
       <span>Kishan — EFREI Paris, Bachelor Management &amp; Stratégie Digitale</span>
-      <span>Atelier Culture IA</span>
+      <span>Volets 1 et 3 intégrés · volets 2 et 4 en attente</span>
     </footer>
 
   </main>
@@ -1143,3 +1815,6 @@ Puis la liste de ce que tu n'as volontairement pas utilisé.</pre>
   ids.forEach(function(id){ io.observe(document.getElementById(id)); });
 })();
 </script>
+
+</body>
+</html>
