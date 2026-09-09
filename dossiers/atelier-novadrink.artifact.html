@@ -606,6 +606,52 @@ a.vrow:hover .vr-t{color:var(--pink-ink)}
   .rail nav h5{margin:0 10px 0 4px; align-self:center; padding-left:0; white-space:nowrap}
 }
 
+
+/* ---------- calibrage RSA (Volet 2) ---------- */
+.rsa{border-top:1px solid var(--ink)}
+.rsa-i{
+  display:grid; grid-template-columns:minmax(0,1fr) 96px 56px 168px;
+  gap:8px 16px; align-items:center; padding:11px 0; border-bottom:1px solid var(--line-soft);
+}
+.rsa-i .t{font-family:var(--f-mono); font-size:13px; line-height:1.35; color:var(--ink)}
+.rsa-i .b{height:4px; background:var(--surface-2); display:block}
+.rsa-i .b i{display:block; height:100%; background:var(--blue)}
+.rsa-i .n{font-family:var(--f-mono); font-size:10.5px; color:var(--mute); font-variant-numeric:tabular-nums; letter-spacing:.04em}
+.rsa-i .w{font-size:13.5px; color:var(--mute); line-height:1.3}
+.rsa-i.max .b i{background:var(--pink)}
+.rsa-i.max .n{color:var(--pink-ink)}
+@media (max-width:760px){
+  .rsa-i{grid-template-columns:minmax(0,1fr) 56px; gap:6px 12px}
+  .rsa-i .b{grid-column:1/-1}
+  .rsa-i .w{grid-column:1/-1}
+}
+
+/* ---------- FAQ SEO ---------- */
+.faq{border-top:1px solid var(--ink)}
+.faq-i{
+  display:grid; grid-template-columns:38px minmax(0,1fr); gap:16px;
+  padding:17px 0; border-bottom:1px solid var(--line-soft);
+}
+.faq-i .qn{font-family:var(--f-mono); font-size:11px; font-weight:600; color:var(--blue-ink); letter-spacing:.08em; padding-top:3px}
+.faq-i .qq{font-family:var(--f-display); font-weight:700; font-variation-settings:"wdth" 94; font-size:16.5px; line-height:1.25; margin-bottom:7px}
+.faq-i .qa{font-size:15px; line-height:1.5; color:var(--mute); max-width:72ch}
+.faq-i .qa b{color:var(--ink); font-weight:640}
+
+/* ---------- mots-clés ---------- */
+.kw{display:flex; flex-wrap:wrap; gap:6px; margin-top:4px}
+.kw span{
+  font-family:var(--f-mono); font-size:11.5px; line-height:1.3;
+  border:1px solid var(--blue); color:var(--blue-ink); padding:5px 9px 4px;
+}
+.kw.neg span{border-color:var(--pink); color:var(--pink-ink); text-decoration:line-through; text-decoration-thickness:1px}
+
+/* ---------- post Teams ---------- */
+.tweet.teams .tweet-av{background:var(--pink)}
+.tweet.teams .tweet-body{display:flex; flex-direction:column; gap:11px}
+.tweet.teams .tweet-body ul{margin:0; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:6px}
+.tweet.teams .tweet-body li{font-size:15px; line-height:1.4}
+.tweet.teams .tweet-body .note{font-size:14px; line-height:1.45; color:var(--mute); font-style:italic}
+
 </style>
 
 <div class="grain" aria-hidden="true"></div>
@@ -626,6 +672,11 @@ a.vrow:hover .vr-t{color:var(--pink-ink)}
       <a href="#v1s5"><i>05</i>Fact-check</a>
       <a href="#v1s6"><i>06</i>Le tweet</a>
       <a href="#v1s7"><i>07</i>Critique de l’IA</a>
+      <h5>Volet 2 — SEO / SEA</h5>
+      <a href="#v2s1"><i>01</i>Prompts P1 → P2</a>
+      <a href="#v2s2"><i>02</i>Note réglementaire</a>
+      <a href="#v2s3"><i>03</i>FAQ SEO</a>
+      <a href="#v2s4"><i>04</i>Brief Google Ads</a>
       <h5>Volet 3 — CRM / Emailing</h5>
       <a href="#s1"><i>01</i>Problématique</a>
       <a href="#s2"><i>02</i>Cadre théorique</a>
@@ -637,7 +688,11 @@ a.vrow:hover .vr-t{color:var(--pink-ink)}
       <a href="#s8"><i>08</i>Risques</a>
       <a href="#s9"><i>09</i>Conclusion</a>
       <a href="#s10"><i>10</i>Bibliographie</a>
-      <h5 class="soon">Volets 2 et 4 — en attente</h5>
+      <h5>Volet 4 — Com. interne</h5>
+      <a href="#v4s1"><i>01</i>Le prompt</a>
+      <a href="#v4s2"><i>02</i>Les deux supports</a>
+      <a href="#v4s3"><i>03</i>Analyse différentielle</a>
+      <a href="#v4s4"><i>04</i>Vigilance visuel</a>
     </nav>
     <div class="rail-foot">Kishan — EFREI Paris</div>
   </aside>
@@ -669,21 +724,21 @@ a.vrow:hover .vr-t{color:var(--pink-ink)}
           <span class="vr-t">E-réputation sur X<small>Accusation de greenwashing, 24 commentaires à classer, un fact-check et un tweet de réponse.</small></span>
           <span class="vr-s s-done">Intégré</span>
         </a>
-        <div class="vrow wait">
+        <a class="vrow" href="#v2">
           <span class="vr-n">Volet 2</span>
-          <span class="vr-t">À intégrer<small>Le document n’a pas encore été fourni.</small></span>
-          <span class="vr-s s-wait">En attente</span>
-        </div>
+          <span class="vr-t">SEO / SEA<small>Lancer NOVADRINK Sport sans écrire une seule allégation santé non validée.</small></span>
+          <span class="vr-s s-done">Intégré</span>
+        </a>
         <a class="vrow" href="#v3">
           <span class="vr-n">Volet 3</span>
           <span class="vr-t">CRM / Emailing<small>Personnaliser une campagne sans exploiter les données de santé déposées spontanément.</small></span>
           <span class="vr-s s-done">Intégré</span>
         </a>
-        <div class="vrow wait">
+        <a class="vrow" href="#v4">
           <span class="vr-n">Volet 4</span>
-          <span class="vr-t">À intégrer<small>Le document n’a pas encore été fourni.</small></span>
-          <span class="vr-s s-wait">En attente</span>
-        </div>
+          <span class="vr-t">Communication interne<small>Un événement, deux supports, et l’inclusion des équipes qui ne peuvent pas venir.</small></span>
+          <span class="vr-s s-done">Intégré</span>
+        </a>
       </div>
 
       <div class="key">
@@ -1140,6 +1195,321 @@ Mission :
         <span class="eyebrow">Conclusion du volet 1</span>
         <h3>Un outil d’aide à l’analyse, jamais la décision</h3>
         <p>La décision finale doit rester humaine, <strong>particulièrement dans une crise d’e-réputation</strong>, où la communication est susceptible d’avoir un impact durable sur l’image de marque. C’est la même conclusion que le Volet 3 atteint par un autre chemin : l’IA applique correctement un critère qu’on lui fournit, elle ne le construit pas.</p>
+      </div>
+    </section>
+
+
+    <!-- ════════ BANNIÈRE VOLET 2 ════════ -->
+    <section class="volet-open" id="v2">
+      <span class="v-tag">Volet 2</span>
+      <h2>SEO / SEA — lancement NOVADRINK Sport</h2>
+      <p class="v-sub">Une boisson post-effort de 500 ml, sans sucres ajoutés, 45 kcal/100 ml. Tout l’enjeu du volet tient dans une contrainte : le règlement (CE) n° 1924/2006 interdit presque tout ce qu’un copywriter sportif a envie d’écrire.</p>
+
+      <div class="figures">
+        <div class="is-pink"><span class="fig-n">3</span><span class="fig-l">familles de mentions<br>supprimées</span></div>
+        <div class="is-blue"><span class="fig-n">1</span><span class="fig-l">allégation<br>nutritionnelle autorisée</span></div>
+        <div><span class="fig-n">9</span><span class="fig-l">titres RSA<br>calibrés ≤ 30 car.</span></div>
+        <div class="is-pink"><span class="fig-n">10</span><span class="fig-l">mots-clés négatifs,<br>dont 2 pour risque santé</span></div>
+      </div>
+    </section>
+
+    <!-- ════════ V2 · 01 ════════ -->
+    <section id="v2s1">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <div>
+          <h2>Prompts et itération</h2>
+          <p>Le premier jet est jugé « trop générique et manquant de rigueur réglementaire ». Le second recadre sur quatre points.</p>
+        </div>
+      </div>
+
+      <div class="ladder">
+        <div class="step f">
+          <div class="step-v">P1<small>Le brief</small></div>
+          <div>
+            <h3>Un rôle, un produit, une cible, un cadre juridique — et un ton</h3>
+<pre class="v1">En tant que copywriter senior expert en SEO, SEA et marketing
+sportif, ta mission est de concevoir la stratégie de lancement
+de NOVADRINK Sport, une boisson post-effort de 500 ml sans
+sucres ajoutés (45 kcal/100 ml) à base d'ingrédients simples
+comme l'eau de coco, le sel de l'Himalaya, le citron, la menthe
+et le potassium de banane.
+
+La cible visée regroupe des sportifs amateurs exigeants de
+35 à 50 ans (trail, running, vélo, triathlon) actifs sur Strava
+et adeptes de produits naturels.
+
+Tu dois structurer un brief d'acquisition complet : positionnement,
+différenciation face aux géants industriels type Isostar ou SiS,
+sélection de mots-clés stratégiques et annonces Google Ads,
+rédiger une FAQ SEO fluide sur les usages du produit, puis
+terminer par un audit critique identifiant les risques.
+
+Le tout doit impérativement adopter un ton premium et sobre,
+tout en respectant à la lettre le règlement européen (CE)
+n° 1924/2006 en bannissant toute promesse santé non validée
+et en consignant les doutes juridiques dans une section dédiée.</pre>
+            <div class="call pink">
+              <span class="eyebrow">Ce que le P1 n’a pas empêché</span>
+              <p>La contrainte réglementaire était pourtant <em>dans</em> le prompt. Elle n’a pas suffi : la sortie contenait toujours « 100 % naturels » et « évite les courbatures ». <strong>Nommer un règlement ne vaut pas une liste d’interdictions</strong> — exactement comme, au Volet 3, « n’utilise pas les données de santé » n’a pas bloqué l’inférence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="step p">
+          <div class="step-v">P2<small>Le recadrage</small></div>
+          <div>
+            <h3>Quatre correctifs, dont deux qui retirent des mots précis</h3>
+            <div class="prompt">
+              <div class="p-h">1 — <b>Conformité stricte CE n° 1924/2006</b></div>
+<pre><b>Supprime toute mention marketing limite comme « 100 % naturels »
+ou « évite les courbatures ». Reste strictement sur l'allégation
+nutritionnelle autorisée « sans sucres ajoutés » et la description
+factuelle « hydratation post-effort » avec 45 kcal/100 ml.</b></pre>
+              <div class="p-h">2 — Persona 35-50 ans affiné</div>
+<pre>Intègre explicitement leur écosystème : communauté Strava,
+récupération après les sorties longues du week-end, distribution
+ciblée magasins bio et boutiques de sport spécialisées.</pre>
+              <div class="p-h">3 — Différenciation concurrentielle</div>
+<pre>Insiste sur le rejet des poudres chimiques et arômes de synthèse
+des marques traditionnelles (Isostar, SiS, GU) sans les citer
+agressivement, en valorisant la composition exacte.</pre>
+              <div class="p-h">4 — <b>Format Google Ads</b></div>
+<pre><b>Vérifie le strict respect du calibrage des titres (max 30 car.)
+et descriptions (max 90 car.) pour une annonce RSA directement
+publiable sans rejet.</b></pre>
+            </div>
+            <p style="margin-top:14px" class="col">Les deux clauses décisives sont la 1 et la 4, et elles ont la même forme : <strong>elles remplacent une intention par une valeur vérifiable.</strong> « Respecte le règlement » devient une liste de mots interdits ; « format Google Ads » devient un nombre de caractères qu’on peut compter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ V2 · 02 ════════ -->
+    <section id="v2s2">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <div>
+          <h2>Note réglementaire : ce qu’on n’a pas le droit d’écrire</h2>
+          <p>Le même geste qu’au Volet 3 : trier ce qui est disponible et ce qui est utilisable. Ici le critère n’est plus la finalité, c’est la validation EFSA.</p>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Mentions supprimées et motifs d’exclusion</span>
+          <span class="n">Planche 01 — CE n° 1924/2006</span>
+        </div>
+        <div class="sorter">
+          <div class="field no">
+            <div class="f-n">« 100 % naturels »</div>
+            <div class="f-s">Notion floue juridiquement, propice aux litiges publicitaires en l’absence de certification globale sur tous les intrants. Remplacée par l’énumération factuelle des ingrédients.</div>
+            <div class="verdict v-no">Supprimé</div>
+          </div>
+          <div class="field no">
+            <div class="f-n">« évite les courbatures »<br>« anti-crampes »<br>« accélère la régénération »</div>
+            <div class="f-s">Non validées par l’EFSA pour ce mix produit. Passibles de sanctions pour allégation thérapeutique illégale.</div>
+            <div class="verdict v-no">Supprimé</div>
+          </div>
+          <div class="field no">
+            <div class="f-n">« réhydrate plus vite »</div>
+            <div class="f-s">Comparatif d’assimilation non étayé cliniquement.</div>
+            <div class="verdict v-no">Supprimé</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Périmètre d’expression strictement autorisé</span>
+          <span class="n">Planche 02 — tout le reste est hors-jeu</span>
+        </div>
+        <div class="sorter">
+          <div class="field">
+            <div class="f-n">« Sans sucres ajoutés »</div>
+            <div class="f-s">Allégation nutritionnelle conforme à l’annexe du règlement : le produit ne contient aucun mono- ou disaccharide ajouté</div>
+            <div class="verdict v-yes">Autorisé</div>
+          </div>
+          <div class="field">
+            <div class="f-n">45 kcal / 100 ml</div>
+            <div class="f-s">Valeur énergétique factuelle</div>
+            <div class="verdict v-yes">Autorisé</div>
+          </div>
+          <div class="field">
+            <div class="f-n">« Hydratation post-effort »</div>
+            <div class="f-s">Dénomination descriptive liée à l’apport hydrique et minéral</div>
+            <div class="verdict v-yes">Autorisé</div>
+          </div>
+          <div class="field">
+            <div class="f-n">Ingrédients sources</div>
+            <div class="f-s">Eau de coco, sel rose de l’Himalaya, jus de citron, extrait de menthe, potassium naturel de banane</div>
+            <div class="verdict v-yes">Autorisé</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="call blue">
+        <span class="eyebrow">Le déplacement</span>
+        <h3>La composition remplace la promesse</h3>
+        <p>Une fois les allégations d’effet retirées, il ne reste que <strong>la liste des ingrédients et deux chiffres</strong>. C’est suffisant : la cible lit méthodiquement les étiquettes. L’argument devient descriptif au lieu d’être promissif — et c’est précisément ce qui le rend crédible auprès d’un public qui se méfie de l’ultra-transformation.</p>
+      </div>
+    </section>
+
+    <!-- ════════ V2 · 03 ════════ -->
+    <section id="v2s3">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <div>
+          <h2>FAQ SEO produit</h2>
+          <p>Quatre questions de longue traîne, écrites pour un sportif autonome, méfiant envers l’ultra-transformation, habitué à lire les étiquettes.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-i">
+          <span class="qn">Q1</span>
+          <div>
+            <p class="qq">En quoi NOVADRINK Sport se distingue-t-elle des poudres d’effort et boissons industrielles ?</p>
+            <p class="qa">La majorité des boissons d’effort conventionnelles reposent sur des maltodextrines industrielles, des édulcorants et des arômes de synthèse. NOVADRINK Sport adopte une composition brute et lisible : <b>eau de coco, sel rose de l’Himalaya, jus de citron, extrait de menthe, potassium naturel issu de la banane</b>. Formule sans sucres ajoutés, apport maîtrisé de 45 kcal / 100 ml, sans ingrédient de charge chimique.</p>
+          </div>
+        </div>
+        <div class="faq-i">
+          <span class="qn">Q2</span>
+          <div>
+            <p class="qq">Quels électrolytes apporte la bouteille de 500 ml après une sortie longue ?</p>
+            <p class="qa">Après plusieurs heures de trail, de cyclisme ou de running, les pertes sudorales concernent l’eau et les minéraux. NOVADRINK Sport apporte des électrolytes issus directement de ses ingrédients : du <b>potassium d’origine végétale</b>, naturellement présent dans l’eau de coco et la purée de banane ; du <b>sodium et des oligo-éléments bruts</b>, issus du sel rose de l’Himalaya non raffiné. Une compensation minérale sans ajout de sels de synthèse.</p>
+          </div>
+        </div>
+        <div class="faq-i">
+          <span class="qn">Q3</span>
+          <div>
+            <p class="qq">Comment l’intégrer dans sa routine d’hydratation post-effort ?</p>
+            <p class="qa">La formule est élaborée exclusivement pour l’<b>hydratation post-effort</b>. À la fin des séances ou des sorties longues du week-end, consommez la bouteille de 500 ml fraîche dans les 30 à 60 minutes suivant l’arrêt de l’activité. La fraîcheur du citron et de la menthe désaltère immédiatement, sans saturation gustative ni lourdeur digestive.</p>
+          </div>
+        </div>
+        <div class="faq-i">
+          <span class="qn">Q4</span>
+          <div>
+            <p class="qq">Où trouver NOVADRINK Sport en dehors du site officiel ?</p>
+            <p class="qa">En accord avec son positionnement, NOVADRINK Sport est distribuée dans les <b>épiceries bio</b> et les <b>magasins spécialisés running, trail et cyclisme</b>. Les packs sont également commandables en ligne pour planifier les ravitaillements de la semaine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ V2 · 04 ════════ -->
+    <section id="v2s4">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <div>
+          <h2>Brief Google Ads</h2>
+          <p>Persona, segmentation, sémantique — et une annonce calibrée au caractère près pour ne pas être rejetée.</p>
+        </div>
+      </div>
+
+      <div class="col prose">
+        <p><span class="tag">Persona.</span> Pratiquants réguliers d’endurance (trail, marathon, cyclosportive, triathlon) de <strong>35 à 50 ans</strong>. Enregistrement systématique sur Strava, sorties longues le samedi ou dimanche matin, lecture méthodique de la liste d’ingrédients, fréquentation des magasins de running indépendants et des enseignes bio. Rejet explicite du goût chimique et de la saturation sucrée des poudres industrielles.</p>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Paramétrage et segmentation</span>
+          <span class="n">Planche 03 — Search uniquement</span>
+        </div>
+        <div class="sorter">
+          <div class="field">
+            <div class="f-n">tranches d’âge</div>
+            <div class="f-s">35-44 et 45-54 exclusivement — exclusion des &lt; 25 ans et &gt; 65 ans</div>
+            <div class="verdict v-yes">Ciblé</div>
+          </div>
+          <div class="field">
+            <div class="f-n">calendrier de diffusion</div>
+            <div class="f-s">Vendredi après-midi → dimanche soir, enchères +20 % pour capter les sorties longues de fin de semaine</div>
+            <div class="verdict v-yes">+20 %</div>
+          </div>
+          <div class="field hold">
+            <div class="f-n">audiences en observation</div>
+            <div class="f-s">In-Market cyclisme et running ; affinité endurance et bio ; Custom Intent « segment Strava », « plan entraînement semi marathon », « ultra trail », « ravito sortie vélo »</div>
+            <div class="verdict v-hold">Observation</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Sémantique</span>
+          <span class="n">Planche 04 — ce qu’on achète, ce qu’on exclut</span>
+        </div>
+        <div class="shift">
+          <div class="box after">
+            <span class="bh">Mots-clés ciblés</span>
+            <span class="bt">Intention d’achat qualifiée</span>
+            <div class="kw">
+              <span>boisson post effort naturelle</span>
+              <span>boisson sans sucres ajoutes sport</span>
+              <span>boisson électrolytes sans arôme artificiel</span>
+              <span>hydratation post effort running</span>
+              <span>boisson récupération trail naturelle</span>
+              <span>alternative boisson isotonique poudre</span>
+            </div>
+          </div>
+          <div class="arrow">contre</div>
+          <div class="box before">
+            <span class="bh">Mots-clés négatifs</span>
+            <span class="bt">Trafic non qualifié et risque santé</span>
+            <div class="kw neg">
+              <span>anti crampe</span>
+              <span>courbatures</span>
+              <span>dopage</span>
+              <span>créatine</span>
+              <span>whey protéine</span>
+              <span>poudre chimique</span>
+              <span>bcaa</span>
+              <span>recette maison</span>
+              <span>diy</span>
+              <span>gratuit</span>
+              <span>pas cher</span>
+              <span>grossiste</span>
+              <span>soda</span>
+            </div>
+            <p style="font-size:13.5px; line-height:1.4; color:var(--mute); margin-top:2px">Les deux premiers ne sont pas là pour la qualification du trafic : <strong>ils excluent le risque d’allégation médicale.</strong> Une exclusion de mot-clé sert ici de garde-fou réglementaire.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">Annonce RSA — calibrage vérifié au caractère près</span>
+          <span class="n">Planche 05 — titres ≤ 30 car., descriptions ≤ 90 car.</span>
+        </div>
+        <div class="rsa">
+          <div class="rsa-i"><span class="t">NOVADRINK Sport 500ml</span><span class="b"><i style="width:70%"></i></span><span class="n">21/30</span><span class="w">Identité produit</span></div>
+          <div class="rsa-i"><span class="t">Hydratation Post-Effort</span><span class="b"><i style="width:76.7%"></i></span><span class="n">23/30</span><span class="w">Bénéfice légal autorisé</span></div>
+          <div class="rsa-i"><span class="t">Sans Sucres Ajoutés</span><span class="b"><i style="width:63.3%"></i></span><span class="n">19/30</span><span class="w">Allégation nutritionnelle CE</span></div>
+          <div class="rsa-i"><span class="t">45 Kcal Pour 100ml</span><span class="b"><i style="width:60%"></i></span><span class="n">18/30</span><span class="w">Donnée factuelle</span></div>
+          <div class="rsa-i"><span class="t">Eau De Coco &amp; Citron Menthe</span><span class="b"><i style="width:90%"></i></span><span class="n">27/30</span><span class="w">Ingrédients clés</span></div>
+          <div class="rsa-i"><span class="t">Potassium &amp; Sel D’Himalaya</span><span class="b"><i style="width:90%"></i></span><span class="n">27/30</span><span class="w">Électrolytes bruts</span></div>
+          <div class="rsa-i"><span class="t">Idéal Après Sortie Longue</span><span class="b"><i style="width:86.7%"></i></span><span class="n">26/30</span><span class="w">Contexte trail / running</span></div>
+          <div class="rsa-i"><span class="t">Zéro Poudre De Synthèse</span><span class="b"><i style="width:76.7%"></i></span><span class="n">23/30</span><span class="w">Différenciation nette</span></div>
+          <div class="rsa-i"><span class="t">En Magasins Bio Et Sport</span><span class="b"><i style="width:80%"></i></span><span class="n">24/30</span><span class="w">Réassurance distribution</span></div>
+
+          <div class="rsa-i max"><span class="t">Eau de coco, sel d’Himalaya, banane et menthe. L’hydratation post-effort sans sucres ajoutés.</span><span class="b"><i style="width:100%"></i></span><span class="n">90/90</span><span class="w">Description 1</span></div>
+          <div class="rsa-i max"><span class="t">Conçue pour le trail, le cyclisme et le running. 45 kcal/100 ml et sans additifs de charge.</span><span class="b"><i style="width:100%"></i></span><span class="n">90/90</span><span class="w">Description 2</span></div>
+          <div class="rsa-i"><span class="t">Finissez votre sortie Strava avec une boisson propre. Disponible en magasins spécialisés.</span><span class="b"><i style="width:98.9%"></i></span><span class="n">89/90</span><span class="w">Description 3</span></div>
+          <div class="rsa-i"><span class="t">Oubliez les poudres d’effort chimiques. Optez pour des électrolytes d’origine végétale.</span><span class="b"><i style="width:96.7%"></i></span><span class="n">87/90</span><span class="w">Description 4</span></div>
+        </div>
+      </div>
+
+      <div class="col prose">
+        <h3>Composants d’annonce</h3>
+        <p><span class="tag">Accroches.</span> Sans Sucres Ajoutés | 45 kcal / 100 ml | Bouteille 500 ml | Zéro Arôme Synthétique</p>
+        <p><span class="tag">Extraits de site.</span> <em>Catégorie : Ingrédients</em> → Eau de coco, Sel d’Himalaya, Citron, Extrait de menthe, Banane.</p>
+        <p><span class="tag">Lieux.</span> Points de vente partenaires : magasins de sport spécialisés et réseaux d’épiceries bio.</p>
+      </div>
+
+      <div class="call">
+        <span class="eyebrow">Ce que le volet 2 partage avec les trois autres</span>
+        <p>Deux descriptions sont calibrées à <strong>exactement 90 caractères sur 90</strong>. C’est la même discipline que le tweet du Volet 1 (~247/280) et que les objets d’emails du Volet 3 (26 et 37 caractères) : <em>une contrainte de format se vérifie, une intention ne se vérifie pas.</em> Le calibrage est le seul endroit du dossier où le contrôle est entièrement automatisable.</p>
       </div>
     </section>
 
@@ -1776,10 +2146,197 @@ Puis la liste de ce que tu n'as volontairement pas utilisé.</pre>
       </div>
     </section>
 
+
+    <!-- ════════ BANNIÈRE VOLET 4 ════════ -->
+    <section class="volet-open" id="v4">
+      <span class="v-tag">Volet 4</span>
+      <h2>Communication interne — NOVADRINK Sport Day</h2>
+      <p class="v-sub">Un même événement, deux supports, deux tons. Et une contrainte qui décide de tout : certains collaborateurs en horaires postés ne pourront pas être présents.</p>
+
+      <div class="figures">
+        <div><span class="fig-n">2</span><span class="fig-l">supports<br>email + Teams</span></div>
+        <div class="is-blue"><span class="fig-n">17</span><span class="fig-l">octobre 2026<br>10h – 16h</span></div>
+        <div class="is-blue"><span class="fig-n">19</span><span class="fig-l">octobre — le dispositif<br>arrive sur les sites</span></div>
+        <div class="is-pink"><span class="fig-n">4</span><span class="fig-l">règles de vigilance<br>sur le visuel</span></div>
+      </div>
+    </section>
+
+    <!-- ════════ V4 · 01 ════════ -->
+    <section id="v4s1">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <div>
+          <h2>Le prompt</h2>
+          <p>Deux contraintes y sont posées d’emblée, et ce sont elles qui font la qualité du livrable : l’inclusion des équipes postées, et l’interdiction de toute allégation santé.</p>
+        </div>
+      </div>
+
+<pre>Tu es responsable marketing et communication interne chez NOVADRINK.
+Prépare la communication du NOVADRINK Sport Day, organisé le samedi
+17 octobre 2026, de 10h à 16h, au siège NOVADRINK à Paris, avec une
+activation à Villejuif. Au programme : dégustation NOVADRINK Sport,
+mini-défi sportif connecté et stand photo. Les collaborateurs peuvent
+venir accompagnés d'un proche.
+
+Crée un email interne professionnel et fédérateur, un post Teams court
+et dynamique, puis justifie leurs différences de ton et de format.
+
+Crée un visuel IA en V1, analyse-le brièvement puis propose une V2
+améliorée, cohérente avec les deux textes, moderne, sportive et
+inclusive. Ajoute une courte note sur les risques : biais de
+représentation, stéréotypes, ressemblance avec une identité existante
+et mention « Contenu généré par IA ».
+
+<b>Certains collaborateurs en horaires postés ne pourront pas être
+présents : la communication doit rester inclusive.
+N'utilise aucune allégation santé ni promesse d'efficacité
+concernant NOVADRINK Sport.</b></pre>
+
+      <div class="call blue">
+        <span class="eyebrow">La contrainte qui produit le livrable</span>
+        <p>« La communication doit rester inclusive » n’est pas une consigne de ton — c’est une consigne de <strong>contenu</strong>. Elle oblige à inventer un dispositif qui n’était pas dans le brief initial : le kit et le défi déployés sur les sites logistiques la semaine suivante. Sans cette clause, les deux textes auraient simplement oublié une partie des effectifs.</p>
+      </div>
+    </section>
+
+    <!-- ════════ V4 · 02 ════════ -->
+    <section id="v4s2">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <div>
+          <h2>Les deux supports</h2>
+          <p>Le même événement, écrit deux fois. La différence de ton n’est pas cosmétique : elle suit le canal de lecture.</p>
+        </div>
+      </div>
+
+      <div class="mails" style="grid-template-columns:1fr">
+        <article class="mail">
+          <div class="mail-top">
+            <div class="mail-to"><span>Support 01 — email interne</span><span>Tous collaborateurs</span></div>
+            <div class="mail-obj">Ensemble pour le lancement de NOVADRINK Sport : rendez-vous le 17 octobre !</div>
+          </div>
+          <div class="mail-body">
+            <p>Chères collaboratrices, chers collaborateurs,</p>
+            <p>Le lancement d’une nouvelle gamme est toujours un moment fort pour notre entreprise. Il concrétise le travail passionné de toutes nos équipes, du développement produit à la logistique, en passant par le marketing et les fonctions support.</p>
+            <p>Pour célébrer ensemble cette étape majeure, nous avons le plaisir de vous inviter au <strong>NOVADRINK Sport Day</strong>, notre événement festif et convivial de rentrée.</p>
+            <p><strong>Date :</strong> samedi 17 octobre 2026<br>
+               <strong>Horaires :</strong> de 10h00 à 16h00 (format ouvert, venez quand vous le souhaitez)<br>
+               <strong>Lieux :</strong> Siège NOVADRINK (Paris) &amp; activation spéciale au parc de Villejuif<br>
+               <strong>Invitations :</strong> chaque collaborateur peut venir accompagné d’un proche</p>
+            <p><strong>Au programme :</strong> un espace dégustation pour découvrir en avant-première les nuances de jus de citron, d’extrait de menthe et d’eau de coco ; un mini-défi connecté accessible à toutes et tous, pour cumuler des kilomètres symboliques au profit d’une cause collective ; un stand photo et des animations.</p>
+            <p><strong>Une attention particulière pour nos équipes en horaires postés.</strong> Nous savons que la continuité de notre activité logistique exige des rythmes spécifiques et que certains d’entre vous ne pourront pas se joindre à nous ce samedi. Cet événement marque le coup d’envoi d’un dispositif global : un Kit Découverte NOVADRINK Sport ainsi que le défi connecté seront déployés directement au sein de chaque site logistique dès la semaine du 19 octobre. Tout le monde fera partie de l’aventure.</p>
+            <p class="sig">Merci de confirmer votre présence avant le 2 octobre via le formulaire en ligne.<br><br>Bien chaleureusement,<br>L’Équipe Direction &amp; Communication Interne</p>
+          </div>
+          <div class="mail-foot"><span>Ton institutionnel, posé, bienveillant</span><span>Lecture complète et formelle</span></div>
+        </article>
+      </div>
+
+      <article class="tweet teams" style="max-width:620px; margin-top:26px">
+        <div class="tweet-top">
+          <span class="tweet-av">T</span>
+          <span class="tweet-id">NOVADRINK — Communication Interne<span>Post Teams · réseau social interne</span></span>
+        </div>
+        <div class="tweet-body">
+          <p><strong>⚡ SAVE THE DATE : NOVADRINK Sport Day ! ⚡</strong></p>
+          <p>Événement en vue pour l’ensemble des équipes NOVADRINK ! Venez célébrer le lancement de notre nouvelle gamme lors d’un moment 100 % convivial et collectif.</p>
+          <ul>
+            <li>📅 <strong>Quand ?</strong> Samedi 17 octobre 2026 (10h – 16h)</li>
+            <li>📍 <strong>Où ?</strong> Siège Paris &amp; parc de Villejuif</li>
+            <li>➕ <strong>Bonus :</strong> +1 invité au choix par collaborateur !</li>
+          </ul>
+          <p><strong>Ce qui vous attend sur place :</strong></p>
+          <ul>
+            <li>🥤 Dégustation exclusive de la nouvelle boisson</li>
+            <li>🏃 Challenge sportif connecté &amp; accessible à TOUS</li>
+            <li>📸 Photobooth &amp; surprises pour petits et grands</li>
+          </ul>
+          <p class="note">💡 Pour les équipes logistiques en horaires postés qui ne peuvent se déplacer : pas d’inquiétude, la tournée dégustation et le challenge connecté arrivent dans vos locaux dès le 19 octobre !</p>
+          <p><strong>👉 Inscrivez-vous en 2 clics via le lien en commentaire !</strong></p>
+        </div>
+        <div class="tweet-foot"><span>Ton dynamique, visuel, synthétique</span><span>Lecture rapide sur mobile</span></div>
+      </article>
+    </section>
+
+    <!-- ════════ V4 · 03 ════════ -->
+    <section id="v4s3">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <div>
+          <h2>Analyse différentielle des supports</h2>
+          <p>Pourquoi deux tons, et pas un seul texte recopié d’un canal à l’autre.</p>
+        </div>
+      </div>
+
+      <div class="trade">
+        <div class="pan get">
+          <span class="h">Email interne</span>
+          <span class="b">Institutionnel, posé, bienveillant</span>
+          <span class="s">Il pose le contexte stratégique du lancement, détaille les informations pratiques et <strong>explicite clairement la mesure d’inclusion</strong> pour les équipes d’entrepôt. Sa structure permet une lecture complète et formelle — c’est le support qui fait foi.</span>
+        </div>
+        <div class="vs">contre</div>
+        <div class="pan give">
+          <span class="h">Post Teams</span>
+          <span class="b">Dynamique, visuel, synthétique</span>
+          <span class="s">Il utilise des pictogrammes pour faciliter la lecture rapide sur mobile ou en flux d’actualité. L’accroche est directe et le message axé sur <strong>l’action immédiate</strong> : l’inscription via le lien. Il ne remplace pas l’email, il le relaie.</span>
+        </div>
+      </div>
+
+      <div class="call pink">
+        <span class="eyebrow">Le point à ne pas manquer</span>
+        <h3>La mention d’inclusion figure dans les deux supports</h3>
+        <p>Elle est développée en paragraphe dans l’email, condensée en une ligne signalée dans le post Teams. <strong>Ne la mettre que dans l’email aurait suffi à la rendre invisible</strong> pour les équipes qui lisent Teams sur mobile — c’est-à-dire précisément celles qui sont concernées.</p>
+      </div>
+    </section>
+
+    <!-- ════════ V4 · 04 ════════ -->
+    <section id="v4s4">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <div>
+          <h2>Règles de vigilance sur le visuel généré</h2>
+          <p>Quatre contrôles à passer avant publication d’une image produite par IA. Ils couvrent la représentation, le droit, la transparence et la réglementation.</p>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-head">
+          <span class="t">La grille de contrôle</span>
+          <span class="n">Planche 01 — à passer avant toute diffusion</span>
+        </div>
+        <div class="drops">
+          <div class="drop">
+            <div class="drop-h"><span class="n">Représentation</span><span class="s">Biais</span></div>
+            <div class="use"><i>Ce qu’il faut vérifier</i>Que le visuel ne présente pas uniquement des personnes très jeunes ou exagérément athlétiques : la cible s’étend de 35 à 50 ans et plus.</div>
+            <div class="why">Pour les équipes logistiques, proscrire les tenues de bureau formelles comme les équipements de compétition. Privilégier des tenues décontractées du quotidien.</div>
+          </div>
+          <div class="drop">
+            <div class="drop-h"><span class="n">Propriété intellectuelle</span><span class="s">Droit</span></div>
+            <div class="use"><i>Ce qu’il faut vérifier</i>L’absence de motifs, typographies ou éléments visuels protégés issus de marques concurrentes — le motif en damier d’Isostar, les effets néon de SiS.</div>
+            <div class="why">Et à l’inverse : la présence exacte du format bouteille 500 ml et l’application stricte de la palette officielle citron / menthe / coco.</div>
+          </div>
+          <div class="drop">
+            <div class="drop-h"><span class="n">Mention IA</span><span class="s">Transparence</span></div>
+            <div class="use"><i>Ce qu’il faut vérifier</i>En cas d’usage d’un générateur d’images (Midjourney, DALL·E, Adobe Firefly), la mention doit figurer en bas à droite du visuel.</div>
+            <div class="data" style="text-decoration:none; border-left-color:var(--blue); background:var(--blue-wash); color:var(--blue-ink)">Visuel généré par IA — NOVADRINK Communication Interne</div>
+          </div>
+          <div class="drop">
+            <div class="drop-h"><span class="n">Allégations</span><span class="s">Réglementaire</span></div>
+            <div class="use"><i>Ce qu’il faut vérifier</i>L’absence totale de promesse de santé ou de performance sur l’image comme en arrière-plan.</div>
+            <div class="data">Récupération 100 % · Anti-crampes · Booster d’énergie · Recommandé par les pros</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="call">
+        <span class="eyebrow">La boucle du dossier</span>
+        <h3>La dernière règle est celle du Volet 2</h3>
+        <p>« Anti-crampes » et « booster d’énergie » sont exactement les mentions supprimées de la FAQ et exclues des mots-clés Google Ads. <strong>Une contrainte réglementaire ne s’applique pas au seul texte : elle suit le message sur tous ses supports</strong>, jusqu’à l’arrière-plan d’une image générée pour une fête d’entreprise. C’est le point où les quatre volets se rejoignent — le contrôle porte sur le message, pas sur le canal.</p>
+      </div>
+    </section>
+
     <footer>
       <span>Atelier NOVADRINK · Culture IA</span>
       <span>Kishan — EFREI Paris, Bachelor Management &amp; Stratégie Digitale</span>
-      <span>Volets 1 et 3 intégrés · volets 2 et 4 en attente</span>
+      <span>Dossier complet — quatre volets</span>
     </footer>
 
   </main>
