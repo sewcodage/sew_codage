@@ -40,7 +40,7 @@ Cintres velours extra-longs, organiseur suspendu pour sheilas/tarhas, housses de
 
 ## 3. Le produit réel (à respecter dans tous les visuels et textes)
 
-- Fournisseur AliExpress : https://fr.aliexpress.com/item/1005011789198166.html (prix affiché : 12,99 €, à confirmer : unité ou lot ?)
+- Fournisseur AliExpress : https://fr.aliexpress.com/item/1005011789198166.html (prix affiché : 12,99 € **pour 1 housse**, confirmé par Kishan le 29/10)
 - Housse **blanche opaque** en tissu non tissé.
 - **Bordures noires** sur tous les bords.
 - **Deux poignées noires** (une en haut, une en bas).
@@ -66,7 +66,15 @@ Taux arrondi 1 € ≈ 4,2 AED. TVA Émirats 5 %. Paiement carte (~3,5 %).
 | Coût d'acquisition max (point mort) | ≈ 15,77 € | ≈ 23,71 € |
 | ROAS minimum | ≈ 1,95 | ≈ 2,0 |
 
-Ces calculs supposaient 1,50 à 3 € par housse. **Le lien fournisseur affiche 12,99 €** : si c'est le prix d'une seule housse, tout le modèle de prix est à refaire.
+Ces calculs supposaient 1,50 à 3 € par housse. **Confirmé le 29/10 : 12,99 € = 1 housse.** Le modèle de prix est à refaire (voir ci-dessous).
+
+### Recalcul avec 12,99 € par housse (livraison fournisseur L inconnue)
+| Offre | Coût produit | Prix mini règle ×3 | En AED (≈ 4,2) |
+|---|---|---|---|
+| 1 housse | 12,99 € + L | 38,97 € + 3L | ≈ 164 AED sans livraison, ≈ 201 AED avec L = 3 € |
+| Lot de 3 | 38,97 € + L | 116,91 € + 3L | ≈ 491 AED sans livraison |
+
+Prix actuel 25,99 € : marge ≈ 10,85 € avant livraison et pub (TVA 5 %, frais carte 3,5 %), soit ×2. Conclusion : avec ce fournisseur, le lot de 3 et le kit ne tiennent pas. Piste prioritaire : trouver un fournisseur entre 2 et 4 € la housse (offres en lot sur AliExpress, Alibaba/1688 via agent) ; prix du marché Golfe à vérifier.
 
 ### Situation actuelle dans Shopify
 Housse vendue à l'unité à **25,99 €** pour un coût de 12,99 € hors livraison → environ ×2, **en dessous de la règle du ×3**. Le prix ou l'offre doit changer avant de lancer la pub.
@@ -86,7 +94,7 @@ TVA 15 %, paiement à la livraison fréquent (10 à 20 % de refus, ordre de gran
 - **Thèmes :** Horizon (en ligne) ; Helio (non publié).
 - **Pages :** uniquement « Contact ».
 - **Politiques :** uniquement la politique de confidentialité. Manquent : CGV, retours/remboursements, livraison, mentions légales.
-- **Collections :** « Page d'accueil » (1 produit), « collection privé protège habille » (vide), « collection privé couvrement » (vide).
+- **Collections :** « Page d'accueil » (1 produit), « Garment Bags » (handle `garment-bags`, 1 produit, renommée le 29/10), « collection privé couvrement » (vide, décision en attente).
 - **Produit :** 1 seul.
   - Titre (corrigé) : « Long Breathable Abaya Garment Bag – 180 cm »
   - Description EN propre (corrigée), vendue à l'unité
@@ -208,7 +216,7 @@ Texte et logo à ajouter ensuite dans Canva (l'IA écrit mal, surtout l'arabe).
 4. Choisir le nom de marque, vérifier marque déposée + domaine, renommer la boutique.
 5. Shopify Markets : créer le marché Émirats (AED), puis Arabie saoudite (SAR) ; activer anglais + arabe.
 6. Rédiger les politiques : retours, livraison (délais réels), CGV, mentions légales.
-7. Nettoyer les collections (renommer ou supprimer les deux vides). Type, tags, SEO title/meta et textes alt : faits le 29/10.
+7. Collections : « Garment Bags » fait ; décider pour « collection privé couvrement ». Type, tags, SEO title/meta et textes alt : faits le 29/10.
 8. Phase 2 du prompt maître : stratégie (personas, arborescence, parcours depuis TikTok/Snapchat/Instagram).
 9. Phases 3 à 7 : wireframes, design system, personnalisation du thème Horizon (copie non publiée), contenus EN/AR, recette.
 10. Test publicitaire de 300 à 500 € après validation de la boutique.
@@ -226,3 +234,4 @@ Texte et logo à ajouter ensuite dans Canva (l'IA écrit mal, surtout l'arabe).
 ## 12. Journal Claude Code
 
 - **29/10/2026** — Fichier de passation versionné dans `shopify-abaya/`. Produit : type, tags, SEO title/meta et textes alternatifs des 11 images ajoutés via l'API Admin. Aucune autre modification (prix, collections, thème, marchés inchangés).
+- **29/10/2026** — 12,99 € confirmé pour 1 housse ; recalcul des prix ajouté (section 4). Collection « collection privé protège habille » renommée « Garment Bags » (handle `garment-bags`) et produit ajouté.
