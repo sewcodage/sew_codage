@@ -235,3 +235,4 @@ Texte et logo à ajouter ensuite dans Canva (l'IA écrit mal, surtout l'arabe).
 
 - **29/10/2026** — Fichier de passation versionné dans `shopify-abaya/`. Produit : type, tags, SEO title/meta et textes alternatifs des 11 images ajoutés via l'API Admin. Aucune autre modification (prix, collections, thème, marchés inchangés).
 - **29/10/2026** — 12,99 € confirmé pour 1 housse ; recalcul des prix ajouté (section 4). Collection « collection privé protège habille » renommée « Garment Bags » (handle `garment-bags`) et produit ajouté.
+- **29/10/2026** — Phase 2 (stratégie) rédigée : `shopify-abaya/phase-2-strategie.md`. En attente de validation de Kishan avant la phase 3.
