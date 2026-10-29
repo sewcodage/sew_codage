@@ -1,0 +1,40 @@
+{%- doc -%}
+  Arabic typography for the Arabic (RTL) storefront.
+
+  Shopify library fonts do not include Arabic glyphs, so Arabic pages load
+  Noto Naskh Arabic (headings) and IBM Plex Sans Arabic (body) from Google Fonts.
+  `html:lang(ar)` outranks the `:root` variables from theme-styles-variables.
+  Arabic has no italics, so accent and heading styles are forced to normal.
+{%- enddoc -%}
+
+{%- if request.locale.iso_code == 'ar' -%}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500;600&display=swap"
+  >
+  {% style %}
+    html:lang(ar) {
+      --font-body--family: 'IBM Plex Sans Arabic', {{ settings.type_body_font.family }}, Tahoma, sans-serif;
+      --font-subheading--family: 'IBM Plex Sans Arabic', {{ settings.type_subheading_font.family }}, Tahoma, sans-serif;
+      --font-heading--family: 'Noto Naskh Arabic', {{ settings.type_heading_font.family }}, serif;
+      --font-heading--style: normal;
+      --font-heading--weight: 600;
+      --font-accent--family: 'Noto Naskh Arabic', {{ settings.type_accent_font.family }}, serif;
+      --font-accent--style: normal;
+      --line-height--display-tight: 1.5;
+      --line-height--display-normal: 1.55;
+      --line-height--display-loose: 1.6;
+      --line-height--body-loose: 1.8;
+      --letter-spacing--display-tight: 0em;
+      --letter-spacing--heading-tight: 0em;
+    }
+
+    html:lang(ar) em,
+    html:lang(ar) i {
+      font-style: normal;
+      color: #7a5c28;
+    }
+  {% endstyle %}
+{%- endif -%}

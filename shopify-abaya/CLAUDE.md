@@ -96,7 +96,8 @@ TVA 15 %, paiement à la livraison fréquent (10 à 20 % de refus, ordre de gran
 - **Politiques :** uniquement la politique de confidentialité. Brouillons des autres dans `politiques-brouillon.md` (pas encore dans Shopify).
 - **Collections :** « Page d'accueil » (1 produit), « Garment Bags » (handle `garment-bags`, 1 produit, renommée le 29/10), « collection privé couvrement » (vide, décision en attente).
 - **Produit :** 1 seul.
-  - Titre (corrigé) : « Long Breathable Abaya Garment Bag – 180 cm »
+  - Titre (corrigé) : « Long Breathable Abaya Garment Bag – 180 cm », adresse `/products/long-abaya-garment-bag-180-cm` (29/10, redirection depuis l'ancienne)
+  - Traduction arabe enregistrée (titre, description, type, SEO), à faire relire
   - Description EN propre (corrigée), vendue à l'unité
   - 1 variante « White », 25,99 €, stock 495
   - 11 images, textes alternatifs EN ajoutés le 29/10 (génériques, à affiner image par image : Claude Code n'a pas pu afficher les images)
@@ -125,7 +126,7 @@ TVA 15 %, paiement à la livraison fréquent (10 à 20 % de refus, ordre de gran
 
 ## 7. Prompt maître du site (agence)
 
-À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite, Phase 2 (stratégie) validée le 29/10, Phase 3 (wireframes) validée le 29/10, Phase 4 (design system) validée le 29/10, Phase 5 (mise en place Shopify) commencée le 29/10, partiellement bloquée (voir `phase-5-mise-en-place.md`).
+À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite, Phase 2 (stratégie) validée le 29/10, Phase 3 (wireframes) validée le 29/10, Phase 4 (design system) validée le 29/10, Phase 5 (mise en place Shopify) commencée le 29/10, partiellement bloquée (voir `phase-5-mise-en-place.md`), Phase 6 (contenus et SEO) avancée le 29/10 (voir `phase-6-contenus-seo.md`).
 
 ```
 # RÔLE
@@ -239,3 +240,4 @@ Texte et logo à ajouter ensuite dans Canva (l'IA écrit mal, surtout l'arabe).
 - **29/10/2026** — Phase 2 validée par Kishan. Phase 3 : wireframes mobiles (accueil EN, fiche produit EN, fiche produit AR en RTL, page Aide) sur le canevas https://claude.ai/artifact/WwMFzcK6uAjRdVp5JbmCUD. Résumé dans `shopify-abaya/phase-3-wireframes.md`.
 - **29/10/2026** — Phase 3 validée. Phase 4 : design system « Housses Abaya » (nom de travail) publié sur https://claude.ai/artifact/13uGvGAPEhWcmaWaPAe87q — tokens (ivoire/sable/noir doux/or patiné), Cormorant Garamond + Jost, Noto Naskh Arabic + IBM Plex Sans Arabic, 6 composants. Versions ordinateur (accueil, fiche produit) ajoutées au canevas des wireframes. Copies versionnées dans `shopify-abaya/design-system/` et `shopify-abaya/wireframes/`.
 - **29/10/2026** — Phase 4 validée. Phase 5 : copie non publiée du thème Horizon configurée (couleurs, Cormorant/Jost, angles), marché Émirats en brouillon (AED), anglais et arabe ajoutés non publiés, pages Help et Our story en brouillon, brouillons des politiques. Bloqué : forfait, coûts, nom de marque, infos légales.
+- **29/10/2026** — Phase 6 : traductions arabes (produit, collection, pages), SEO de la collection, adresse produit raccourcie, blog renommé « Journal » + 1er article de fond en brouillon, polices arabes dans la copie du thème (`snippets/arabic-fonts.liquid`). Fichiers du thème copiés dans `shopify-abaya/theme/`.
