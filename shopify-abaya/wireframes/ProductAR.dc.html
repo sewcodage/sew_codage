@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>صفحة المنتج – نموذج أولي للجوال</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F1C18}a:hover{color:#5E574D}
+.ph{background:#E6DCCB;border:1px dashed #8A7F70;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;box-sizing:border-box;font-size:13px;color:#4A443B}
+.btn{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:2px;font-size:16px;font-weight:600;text-decoration:none;box-sizing:border-box;padding:0 20px;font-family:inherit}
+.ar-serif{font-family:'Noto Naskh Arabic',serif}
+.opt{display:flex;gap:12px;align-items:center;padding:14px;background:#FFFFFF;border:1px solid #B9AE9C;cursor:pointer}
+details{border-bottom:1px solid #DDD3C3}
+summary{min-height:52px;display:flex;align-items:center;font-weight:600;font-size:16px;cursor:pointer}
+</style>
+</helmet>
+<div dir="rtl" style="width: 390px; min-height: 3700px; background: #F7F3EC; color: #1F1C18; font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; display: flex; flex-direction: column; position: relative">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 0 8px; height: 60px; border-bottom: 1px solid #DDD3C3">
+<a href="Main.dc.html" aria-label="العودة إلى الصفحة الرئيسية" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F1C18" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+</a>
+<div class="ar-serif" style="font-size: 22px">[اسم العلامة]</div>
+<div style="display: flex; align-items: center">
+<a href="Product.dc.html" style="font-size: 13px; font-weight: 600; padding: 12px 6px; text-decoration: none">ع | EN</a>
+<a href="#" aria-label="السلة" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F1C18" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+</a>
+</div>
+</header>
+
+<div class="ph" style="height: 390px">صورة ١/١١ (اسحبي)<br>الكيس وحده على خلفية رملية دافئة</div>
+<div style="display: flex; gap: 6px; padding: 8px 16px; overflow: hidden">
+<div class="ph" style="width: 56px; height: 56px; flex: none; padding: 2px">١</div>
+<div class="ph" style="width: 56px; height: 56px; flex: none; padding: 2px">فيديو</div>
+<div class="ph" style="width: 56px; height: 56px; flex: none; padding: 2px">الجوانب</div>
+<div class="ph" style="width: 56px; height: 56px; flex: none; padding: 2px">المقابض</div>
+<div class="ph" style="width: 56px; height: 56px; flex: none; padding: 2px">المقاس</div>
+</div>
+
+<section style="padding: 16px; display: flex; flex-direction: column; gap: 14px">
+<h1 class="ar-serif" style="margin: 0; font-size: 26px; line-height: 1.5; font-weight: 600">كيس حفظ العبايات الطويل القابل للتهوية – ١٨٠ سم</h1>
+<div style="font-size: 20px; font-weight: 600">[السعر] درهم <span style="font-size: 13px; font-weight: 400; color: #4A443B">شامل ضريبة القيمة المضافة</span></div>
+<div style="font-size: 13px; color: #4A443B">أو ٤ دفعات بقيمة [المبلغ] درهم مع تابي</div>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<legend style="font-weight: 600; font-size: 16px; margin-bottom: 8px">اختاري مجموعتك</legend>
+<label class="opt"><input type="radio" name="set-ar" style="width: 20px; height: 20px"><span style="flex: 1"><span style="display: block; font-weight: 600">كيس واحد</span></span><span style="font-weight: 600">[السعر] درهم</span></label>
+<label class="opt" style="border: 2px solid #1F1C18"><input type="radio" name="set-ar" checked style="width: 20px; height: 20px"><span style="flex: 1"><span style="display: block; font-weight: 600">مجموعة من ٣ أكياس · الأكثر طلبًا</span><span style="display: block; font-size: 13px; color: #4A443B">[سعر الكيس] درهم للكيس</span></span><span style="font-weight: 600">[السعر] درهم</span></label>
+<label class="opt"><input type="radio" name="set-ar" style="width: 20px; height: 20px"><span style="flex: 1"><span style="display: block; font-weight: 600">طقم الخزانة</span><span style="display: block; font-size: 13px; color: #4A443B">٣ أكياس + ٦ علاقات مخملية + كيس معطّر</span></span><span style="font-weight: 600">[السعر] درهم</span></label>
+</fieldset>
+
+<div style="display: flex; gap: 10px; align-items: center; background: #EFE7DA; padding: 12px; font-size: 14px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F1C18" stroke-width="1.6" aria-hidden="true" style="transform: scaleX(-1)"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg>
+<span>التوصيل إلى الإمارات خلال <strong>[X–Y] أيام</strong> · مجاني ابتداءً من [الحد] درهم</span>
+</div>
+
+<button class="btn" style="background: #1F1C18; color: #F7F3EC; border: 0; width: 100%">أضيفي إلى السلة</button>
+<button class="btn" style="background: #FFFFFF; color: #1F1C18; border: 1px solid #1F1C18; width: 100%">الشراء عبر Apple Pay</button>
+<div style="font-size: 13px; color: #4A443B; text-align: center">الدفع عند الاستلام متاح · يتم التأكيد عبر واتساب</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; font-size: 12px; text-align: center; color: #4A443B">
+<div style="border: 1px solid #DDD3C3; padding: 10px 4px">الإرجاع خلال [N] يومًا</div>
+<div style="border: 1px solid #DDD3C3; padding: 10px 4px">دعم عبر واتساب</div>
+<div style="border: 1px solid #DDD3C3; padding: 10px 4px">دفع آمن</div>
+</div>
+</section>
+
+<section style="background: #EFE7DA; padding: 32px 16px; display: flex; flex-direction: column; gap: 14px">
+<h2 class="ar-serif" style="margin: 0; font-size: 24px; font-weight: 600">يتّسع لعباية بطولها الكامل</h2>
+<div class="ph" style="height: 480px">فيديو ٩:١٦ (يُصوَّر بالعيّنة)<br>وضع العباية في الكيس وإغلاقه وتعليقه</div>
+</section>
+
+<section style="padding: 32px 16px; display: flex; flex-direction: column; gap: 14px">
+<h2 class="ar-serif" style="margin: 0; font-size: 24px; font-weight: 600">لماذا ستحبينه</h2>
+<ul style="margin: 0; padding-right: 18px; padding-left: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.7">
+<li><strong>مصمم للعبايات:</strong> بطول ١٨٠ سم، فتبقى العباية معلقة بكامل طولها.</li>
+<li><strong>قماش يسمح بالتهوية:</strong> خامة غير منسوجة تحمي من الغبار.</li>
+<li><strong>مساحة إضافية في الأسفل:</strong> جوانب أوسع للعبايات الواسعة والمطرزة.</li>
+<li><strong>سهل الحمل:</strong> مقبضان متينان للسفر والزيارات.</li>
+<li><strong>لمسة أنيقة:</strong> لون أبيض بحواف سوداء.</li>
+</ul>
+</section>
+
+<section style="padding: 0 16px 24px; display: flex; flex-direction: column; gap: 14px">
+<h2 class="ar-serif" style="margin: 0; font-size: 22px; font-weight: 600">هل يناسب عبايتي؟</h2>
+<div class="ph" style="height: 200px">رسم المقاسات<br>الكيس ≈ ١٨٠ سم بجانب صورة ظلية · العرض [يُقاس على العيّنة]</div>
+</section>
+
+<section style="padding: 0 16px 24px; display: flex; flex-direction: column">
+<details open><summary>التفاصيل</summary><div style="font-size: 14px; color: #4A443B; padding-bottom: 14px; line-height: 1.7">الطول: حوالي ١٨٠ سم · الخامة: قماش غير منسوج قابل للتهوية · الإغلاق: سحاب بطول الكيس</div></details>
+<details><summary>محتوى العلبة</summary><div style="font-size: 14px; padding-bottom: 14px">حسب المجموعة المختارة.</div></details>
+<details><summary>العناية</summary><div style="font-size: 14px; padding-bottom: 14px">احفظي عباياتك نظيفة وجافة تمامًا.</div></details>
+<details><summary>التوصيل والإرجاع</summary><div style="font-size: 14px; padding-bottom: 14px">ملخص قصير + رابط صفحة المساعدة.</div></details>
+</section>
+
+<section style="background: #EFE7DA; padding: 32px 16px; display: flex; flex-direction: column; gap: 8px">
+<h2 class="ar-serif" style="margin: 0 0 8px; font-size: 22px; font-weight: 600">الأسئلة الشائعة</h2>
+<details><summary>كم تستغرق مدة التوصيل إلى الإمارات؟</summary><div style="font-size: 14px; padding-bottom: 14px">[المدة الفعلية]</div></details>
+<details><summary>هل يمكنني الدفع عند الاستلام؟</summary><div style="font-size: 14px; padding-bottom: 14px">[نعم/لا + تأكيد عبر واتساب]</div></details>
+<details><summary>هل الكيس طويل بما يكفي لعبايتي؟</summary><div style="font-size: 14px; padding-bottom: 14px">حوالي ١٨٠ سم، راجعي الرسم.</div></details>
+<details><summary>هل يمكنني الإرجاع؟</summary><div style="font-size: 14px; padding-bottom: 14px">[سياسة الإرجاع]</div></details>
+</section>
+
+<section style="padding: 32px 16px; display: flex; flex-direction: column; gap: 12px">
+<h2 class="ar-serif" style="margin: 0; font-size: 22px; font-weight: 600">التقييمات</h2>
+<div class="ph" style="height: 120px">تقييمات بالصور<br>تظهر فقط بعد وجود تقييمات حقيقية</div>
+</section>
+
+<section style="padding: 0 16px 120px; display: flex; flex-direction: column; gap: 12px">
+<h2 class="ar-serif" style="margin: 0; font-size: 22px; font-weight: 600">أكملي خزانتك</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<div class="ph" style="height: 180px">علاقات مخملية<br>(عند توفرها)</div>
+<div class="ph" style="height: 180px">طقم الخزانة</div>
+</div>
+</section>
+
+<div style="position: absolute; left: 0; right: 0; top: 772px; background: #F7F3EC; border-top: 1px solid #B9AE9C; padding: 10px 16px; display: flex; gap: 12px; align-items: center; box-shadow: 0 -4px 12px rgba(31,28,24,0.08)">
+<div style="flex: 1; font-size: 13px"><div style="font-weight: 600">مجموعة من ٣</div><div>[السعر] درهم</div></div>
+<button class="btn" style="background: #1F1C18; color: #F7F3EC; border: 0">أضيفي إلى السلة</button>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":3700}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

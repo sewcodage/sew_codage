@@ -1,0 +1,24 @@
+<!-- @dsCard group="Commerce" height=300 subtitle="Lot de 3 présélectionné" -->
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+.wrap{padding:var(--space-4);background:var(--ivory-50);font-family:var(--font-sans);color:var(--ink-900);max-width:380px}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--space-2)}
+legend{font:500 16px/25px var(--font-sans);margin-bottom:var(--space-2)}
+.opt{display:flex;gap:var(--space-3);align-items:center;padding:var(--space-4);background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-sm);cursor:pointer}
+.opt:has(input:checked){border:2px solid var(--ink-900);padding:calc(var(--space-4) - 1px)}
+.opt input{width:20px;height:20px;accent-color:var(--ink-900);margin:0}
+.txt{flex:1;display:flex;flex-direction:column;gap:2px}
+.name{font:500 16px/22px var(--font-sans)}
+.sub{font:400 14px/20px var(--font-sans);color:var(--ink-700)}
+.price{font:500 16px/22px var(--font-sans);font-variant-numeric:tabular-nums}
+.badge{align-self:flex-start;background:var(--ink-900);color:var(--on-dark);font:500 11px/14px var(--font-sans);letter-spacing:1.2px;padding:3px 6px}
+</style>
+<div class="wrap">
+<fieldset>
+<legend>Choose your set</legend>
+<label class="opt"><input type="radio" name="set" id="o1"><span class="txt"><span class="name">1 bag</span></span><span class="price">[PRICE] AED</span></label>
+<label class="opt"><input type="radio" name="set" id="o3" checked><span class="txt"><span class="badge">MOST POPULAR</span><span class="name">Set of 3 bags</span><span class="sub">[PRICE PER BAG] AED per bag</span></span><span class="price">[PRICE] AED</span></label>
+<label class="opt"><input type="radio" name="set" id="ok"><span class="txt"><span class="name">Wardrobe kit</span><span class="sub">3 bags + 6 velvet hangers + 1 sachet</span></span><span class="price">[PRICE] AED</span></label>
+</fieldset>
+</div>
+<script></script>

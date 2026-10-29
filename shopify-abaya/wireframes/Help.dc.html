@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Help – mobile wireframe</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F1C18}a:hover{color:#5E574D}
+.btn{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:2px;font-size:15px;font-weight:600;text-decoration:none;box-sizing:border-box;padding:0 20px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+details{border-bottom:1px solid #DDD3C3}
+summary{min-height:52px;display:flex;align-items:center;font-weight:600;font-size:15px;cursor:pointer}
+.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #DDD3C3;font-size:14px}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 2300px; background: #F7F3EC; color: #1F1C18; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 0 8px; height: 60px; border-bottom: 1px solid #DDD3C3">
+<a href="Main.dc.html" aria-label="Back to home" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F1C18" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+</a>
+<div class="serif" style="font-size: 24px; letter-spacing: 1px">[BRAND NAME]</div>
+<a href="#" style="font-size: 13px; font-weight: 600; padding: 12px 8px; text-decoration: none">EN | ع</a>
+</header>
+
+<section style="padding: 28px 16px 16px; display: flex; flex-direction: column; gap: 16px">
+<h1 class="serif" style="margin: 0; font-size: 38px; font-weight: 500">How can we <em>help</em>?</h1>
+<nav aria-label="Help sections" style="display: flex; gap: 8px; flex-wrap: wrap">
+<a href="#faq" style="border: 1px solid #1F1C18; padding: 12px 14px; font-size: 14px; text-decoration: none">FAQ</a>
+<a href="#shipping" style="border: 1px solid #1F1C18; padding: 12px 14px; font-size: 14px; text-decoration: none">Shipping</a>
+<a href="#returns" style="border: 1px solid #1F1C18; padding: 12px 14px; font-size: 14px; text-decoration: none">Returns</a>
+<a href="#contact" style="border: 1px solid #1F1C18; padding: 12px 14px; font-size: 14px; text-decoration: none">Contact</a>
+</nav>
+<a class="btn" href="#contact" style="background: #1F1C18; color: #F7F3EC">Chat with us on WhatsApp</a>
+<div style="font-size: 13px; color: #4A443B">Replies [HOURS, GULF TIME]</div>
+</section>
+
+<section id="faq" style="padding: 24px 16px; display: flex; flex-direction: column">
+<h2 class="serif" style="margin: 0 0 8px; font-size: 28px; font-weight: 500">FAQ</h2>
+<details><summary>Is the bag long enough for my abaya?</summary><div style="font-size: 14px; padding-bottom: 14px">Approx. 180 cm. [MEASURE ON SAMPLE]</div></details>
+<details><summary>What is it made of?</summary><div style="font-size: 14px; padding-bottom: 14px">Breathable non-woven fabric.</div></details>
+<details><summary>Which payment methods do you accept?</summary><div style="font-size: 14px; padding-bottom: 14px">[CARD · APPLE PAY · TABBY · CASH ON DELIVERY]</div></details>
+<details><summary>Can I order for a gift?</summary><div style="font-size: 14px; padding-bottom: 14px">[GIFT NOTE OPTION?]</div></details>
+<details><summary>How do I track my order?</summary><div style="font-size: 14px; padding-bottom: 14px">Tracking link by email and WhatsApp.</div></details>
+</section>
+
+<section id="shipping" style="background: #EFE7DA; padding: 28px 16px; display: flex; flex-direction: column; gap: 8px">
+<h2 class="serif" style="margin: 0 0 8px; font-size: 28px; font-weight: 500">Shipping</h2>
+<div class="row" style="font-weight: 600"><span>Destination</span><span>Delay · Price</span></div>
+<div class="row"><span>United Arab Emirates</span><span>[X–Y] days · [PRICE] AED</span></div>
+<div class="row"><span>Saudi Arabia (later)</span><span>[X–Y] days · [PRICE] SAR</span></div>
+<div class="row"><span>Free delivery</span><span>From [THRESHOLD] AED</span></div>
+<p style="margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: #4A443B">Orders ship from our partner warehouse. Delays shown are business days, measured on real orders. [TEXT TO VALIDATE]</p>
+</section>
+
+<section id="returns" style="padding: 28px 16px; display: flex; flex-direction: column; gap: 12px">
+<h2 class="serif" style="margin: 0; font-size: 28px; font-weight: 500">Returns &amp; refunds</h2>
+<ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45">
+<li>Message us on WhatsApp or email within [N] days of delivery.</li>
+<li>We confirm the return and send the instructions.</li>
+<li>Refund within [N] days after we receive the item.</li>
+</ol>
+<a href="#" style="font-size: 14px">Read the full returns policy</a>
+</section>
+
+<section id="contact" style="background: #1F1C18; color: #F7F3EC; padding: 32px 16px; display: flex; flex-direction: column; gap: 14px">
+<h2 class="serif" style="margin: 0; font-size: 28px; font-weight: 500">Contact</h2>
+<a class="btn" href="#" style="background: #F7F3EC; color: #1F1C18">WhatsApp [NUMBER]</a>
+<label for="msg-email" style="font-size: 14px">Email</label>
+<input id="msg-email" type="email" style="min-height: 48px; border: 1px solid #B9AE9C; background: #FFFFFF; padding: 0 12px; font-size: 15px">
+<label for="msg-text" style="font-size: 14px">Message</label>
+<textarea id="msg-text" rows="4" style="border: 1px solid #B9AE9C; background: #FFFFFF; padding: 12px; font-size: 15px; font-family: inherit"></textarea>
+<button class="btn" style="background: #F7F3EC; color: #1F1C18; border: 0">Send</button>
+</section>
+
+<footer style="padding: 24px 16px 40px; font-size: 12px; color: #5E574D">Same footer as home: policies, legal notice, payment methods.</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2300}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
