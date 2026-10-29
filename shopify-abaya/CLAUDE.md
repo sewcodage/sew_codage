@@ -89,11 +89,11 @@ TVA 15 %, paiement à la livraison fréquent (10 à 20 % de refus, ordre de gran
 - **Boutique :** « Ma boutique », mxzet6-ss.myshopify.com
 - **Forfait :** essai (trial). Il faut choisir un forfait avant de pouvoir vendre.
 - **Devise :** EUR uniquement. **Pays :** France. **Fuseau :** CET.
-- **Langue :** français uniquement (pas d'anglais ni d'arabe publiés).
-- **Marchés :** France uniquement (aucun marché Golfe).
-- **Thèmes :** Horizon (en ligne) ; Helio (non publié).
-- **Pages :** uniquement « Contact ».
-- **Politiques :** uniquement la politique de confidentialité. Manquent : CGV, retours/remboursements, livraison, mentions légales.
+- **Langues :** français (principale, publiée) ; anglais et arabe ajoutés le 29/10, **non publiés**.
+- **Marchés :** France (actif) ; « United Arab Emirates » (handle `ae`, AED, TVA incluse) créé le 29/10 en **brouillon**.
+- **Thèmes :** Horizon (en ligne, inchangé) ; Helio (non publié) ; « Horizon – Housses Abaya (brouillon) » (non publié, id 209229611340) aux couleurs et polices du design system.
+- **Pages :** « Contact » (publiée) ; « Help » et « Our story » créées le 29/10, **non publiées**.
+- **Politiques :** uniquement la politique de confidentialité. Brouillons des autres dans `politiques-brouillon.md` (pas encore dans Shopify).
 - **Collections :** « Page d'accueil » (1 produit), « Garment Bags » (handle `garment-bags`, 1 produit, renommée le 29/10), « collection privé couvrement » (vide, décision en attente).
 - **Produit :** 1 seul.
   - Titre (corrigé) : « Long Breathable Abaya Garment Bag – 180 cm »
@@ -125,7 +125,7 @@ TVA 15 %, paiement à la livraison fréquent (10 à 20 % de refus, ordre de gran
 
 ## 7. Prompt maître du site (agence)
 
-À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite, Phase 2 (stratégie) validée le 29/10, Phase 3 (wireframes) validée le 29/10, Phase 4 (design system) livrée le 29/10 et en attente de validation ; prochaine étape : Phase 5 (mise en place Shopify).
+À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite, Phase 2 (stratégie) validée le 29/10, Phase 3 (wireframes) validée le 29/10, Phase 4 (design system) validée le 29/10, Phase 5 (mise en place Shopify) commencée le 29/10, partiellement bloquée (voir `phase-5-mise-en-place.md`).
 
 ```
 # RÔLE
@@ -238,3 +238,4 @@ Texte et logo à ajouter ensuite dans Canva (l'IA écrit mal, surtout l'arabe).
 - **29/10/2026** — Phase 2 (stratégie) rédigée : `shopify-abaya/phase-2-strategie.md`. En attente de validation de Kishan avant la phase 3.
 - **29/10/2026** — Phase 2 validée par Kishan. Phase 3 : wireframes mobiles (accueil EN, fiche produit EN, fiche produit AR en RTL, page Aide) sur le canevas https://claude.ai/artifact/WwMFzcK6uAjRdVp5JbmCUD. Résumé dans `shopify-abaya/phase-3-wireframes.md`.
 - **29/10/2026** — Phase 3 validée. Phase 4 : design system « Housses Abaya » (nom de travail) publié sur https://claude.ai/artifact/13uGvGAPEhWcmaWaPAe87q — tokens (ivoire/sable/noir doux/or patiné), Cormorant Garamond + Jost, Noto Naskh Arabic + IBM Plex Sans Arabic, 6 composants. Versions ordinateur (accueil, fiche produit) ajoutées au canevas des wireframes. Copies versionnées dans `shopify-abaya/design-system/` et `shopify-abaya/wireframes/`.
+- **29/10/2026** — Phase 4 validée. Phase 5 : copie non publiée du thème Horizon configurée (couleurs, Cormorant/Jost, angles), marché Émirats en brouillon (AED), anglais et arabe ajoutés non publiés, pages Help et Our story en brouillon, brouillons des politiques. Bloqué : forfait, coûts, nom de marque, infos légales.
