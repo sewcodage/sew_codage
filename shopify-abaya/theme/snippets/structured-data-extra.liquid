@@ -1,0 +1,47 @@
+{%- doc -%}
+  Extra JSON-LD not covered by Horizon (which already outputs Product and Article).
+
+  - Organization: on the home page.
+  - FAQPage: on the Help page (handle `help`). Off until the answers contain real
+    information instead of [PLACEHOLDERS]: set `faq_ready` to true then.
+    Questions and answers must match the visible page text.
+{%- enddoc -%}
+
+{%- liquid
+  assign faq_ready = false
+-%}
+
+{%- if request.page_type == 'index' -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": {{ shop.name | json }},
+      "url": {{ request.origin | append: routes.root_url | json }}
+      {%- if settings.logo != blank -%},
+      "logo": {{ settings.logo | image_url: width: 512 | prepend: 'https:' | json }}
+      {%- endif %}
+    }
+  </script>
+{%- endif -%}
+
+{%- if faq_ready and request.page_type == 'page' and page.handle == 'help' -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": {{ 'Is the bag long enough for my abaya?' | json }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ 'The bag is approx. 180 cm long, so most full-length abayas hang without folding at the hem.' | json }} }
+        },
+        {
+          "@type": "Question",
+          "name": {{ 'What is it made of?' | json }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ 'Breathable non-woven fabric, with black edging, a full-length zipper and two handles.' | json }} }
+        }
+      ]
+    }
+  </script>
+{%- endif -%}

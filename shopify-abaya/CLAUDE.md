@@ -126,7 +126,7 @@ TVA 15 %, paiement à la livraison fréquent (10 à 20 % de refus, ordre de gran
 
 ## 7. Prompt maître du site (agence)
 
-À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite, Phase 2 (stratégie) validée le 29/10, Phase 3 (wireframes) validée le 29/10, Phase 4 (design system) validée le 29/10, Phase 5 (mise en place Shopify) commencée le 29/10, partiellement bloquée (voir `phase-5-mise-en-place.md`), Phase 6 (contenus et SEO) avancée le 29/10 (voir `phase-6-contenus-seo.md`).
+À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite, Phase 2 (stratégie) validée le 29/10, Phase 3 (wireframes) validée le 29/10, Phase 4 (design system) validée le 29/10, Phase 5 (mise en place Shopify) commencée le 29/10, partiellement bloquée (voir `phase-5-mise-en-place.md`), Phase 6 (contenus et SEO) avancée le 29/10 (voir `phase-6-contenus-seo.md`), Phase 7 (recette) faite le 29/10 sur fichiers et données : 14 points à corriger, dont 4 bloquants (voir `phase-7-recette.md`).
 
 ```
 # RÔLE
@@ -241,3 +241,4 @@ Texte et logo à ajouter ensuite dans Canva (l'IA écrit mal, surtout l'arabe).
 - **29/10/2026** — Phase 3 validée. Phase 4 : design system « Housses Abaya » (nom de travail) publié sur https://claude.ai/artifact/13uGvGAPEhWcmaWaPAe87q — tokens (ivoire/sable/noir doux/or patiné), Cormorant Garamond + Jost, Noto Naskh Arabic + IBM Plex Sans Arabic, 6 composants. Versions ordinateur (accueil, fiche produit) ajoutées au canevas des wireframes. Copies versionnées dans `shopify-abaya/design-system/` et `shopify-abaya/wireframes/`.
 - **29/10/2026** — Phase 4 validée. Phase 5 : copie non publiée du thème Horizon configurée (couleurs, Cormorant/Jost, angles), marché Émirats en brouillon (AED), anglais et arabe ajoutés non publiés, pages Help et Our story en brouillon, brouillons des politiques. Bloqué : forfait, coûts, nom de marque, infos légales.
 - **29/10/2026** — Phase 6 : traductions arabes (produit, collection, pages), SEO de la collection, adresse produit raccourcie, blog renommé « Journal » + 1er article de fond en brouillon, polices arabes dans la copie du thème (`snippets/arabic-fonts.liquid`). Fichiers du thème copiés dans `shopify-abaya/theme/`.
+- **29/10/2026** — Phase 7 : recette statique (aperçu inaccessible depuis Claude Code). JSON-LD Organization ajouté, FAQPage prêt mais désactivé (`snippets/structured-data-extra.liquid`). Liste des corrections et liste de contrôle avant publication dans `phase-7-recette.md`.
