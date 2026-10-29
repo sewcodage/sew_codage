@@ -125,7 +125,7 @@ TVA 15 %, paiement à la livraison fréquent (10 à 20 % de refus, ordre de gran
 
 ## 7. Prompt maître du site (agence)
 
-À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite ci-dessus, prochaine étape : Phase 2.
+À utiliser comme brief de travail. Méthode en 7 phases, **validation de Kishan entre chaque phase**. Phase 1 (audit) faite, Phase 2 (stratégie) validée le 29/10, Phase 3 (wireframes) livrée le 29/10 et en attente de validation ; prochaine étape : Phase 4 (design system).
 
 ```
 # RÔLE
@@ -236,3 +236,4 @@ Texte et logo à ajouter ensuite dans Canva (l'IA écrit mal, surtout l'arabe).
 - **29/10/2026** — Fichier de passation versionné dans `shopify-abaya/`. Produit : type, tags, SEO title/meta et textes alternatifs des 11 images ajoutés via l'API Admin. Aucune autre modification (prix, collections, thème, marchés inchangés).
 - **29/10/2026** — 12,99 € confirmé pour 1 housse ; recalcul des prix ajouté (section 4). Collection « collection privé protège habille » renommée « Garment Bags » (handle `garment-bags`) et produit ajouté.
 - **29/10/2026** — Phase 2 (stratégie) rédigée : `shopify-abaya/phase-2-strategie.md`. En attente de validation de Kishan avant la phase 3.
+- **29/10/2026** — Phase 2 validée par Kishan. Phase 3 : wireframes mobiles (accueil EN, fiche produit EN, fiche produit AR en RTL, page Aide) sur le canevas https://claude.ai/artifact/WwMFzcK6uAjRdVp5JbmCUD. Résumé dans `shopify-abaya/phase-3-wireframes.md`.
