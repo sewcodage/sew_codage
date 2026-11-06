@@ -1,0 +1,580 @@
+{
+  "sections": {
+    "section": {
+      "type": "section",
+      "name": "En-tête de collection",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<h1>{{ closest.collection.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "gap": 24,
+        "horizontal_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "padding-block-start": 56,
+        "padding-block-end": 32
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "filters": {
+          "type": "filters",
+          "static": true,
+          "settings": {
+            "enable_filtering": true,
+            "filter_style": "horizontal",
+            "filter_width": "centered",
+            "enable_sorting": true,
+            "enable_grid_density": true,
+            "padding-block-start": 8,
+            "padding-block-end": 8
+          },
+          "blocks": {}
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4
+          },
+          "blocks": {
+            "card-gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "square",
+                "border_radius": 0
+              },
+              "blocks": {}
+            },
+            "title": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "padding-block-start": 8
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "card-gallery",
+            "title",
+            "price"
+          ]
+        }
+      },
+      "settings": {
+        "layout_type": "grid",
+        "product_card_size": "large",
+        "mobile_product_card_size": "large",
+        "enable_infinite_scroll": true,
+        "products_per_page": 24,
+        "product_grid_width": "centered",
+        "columns_gap_horizontal": 16,
+        "columns_gap_vertical": 32,
+        "background_color": "#FFFFFF",
+        "padding-block-start": 0,
+        "padding-block-end": 96
+      }
+    },
+    "description": {
+      "type": "section",
+      "name": "Description de la collection",
+      "blocks": {
+        "eyebrow": {
+          "type": "text",
+          "name": "Sur-titre",
+          "settings": {
+            "text": "<p>À propos de la collection</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "0.75rem",
+            "line_height": "normal",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "title": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<h2>{{ closest.collection.title }}</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h3",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "desc": {
+          "type": "text",
+          "name": "Description (modifiable dans Produits › Collections)",
+          "settings": {
+            "text": "{{ closest.collection.description }}",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "title",
+        "desc"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "gap": 16,
+        "horizontal_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "padding-block-start": 16,
+        "padding-block-end": 88
+      }
+    },
+    "histoire": {
+      "type": "section",
+      "name": "Notre histoire",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "name": "Photo",
+          "settings": {
+            "image": "shopify://shop_images/bracelet-trefle-toutes-couleurs.jpg",
+            "image_ratio": "portrait",
+            "width": "fill",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "texte": {
+          "type": "group",
+          "name": "Texte",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "gap": 18,
+            "horizontal_alignment": "flex-start",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "width": "fill",
+            "height": "fit",
+            "padding-inline-start": 24,
+            "padding-inline-end": 24
+          },
+          "blocks": {
+            "eyebrow": {
+              "type": "text",
+              "name": "Sur-titre",
+              "settings": {
+                "text": "<p>Notre histoire</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "uppercase",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "title": {
+              "type": "text",
+              "name": "Titre",
+              "settings": {
+                "text": "<h2>Des bijoux pensés comme des porte-bonheur</h2>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "p1": {
+              "type": "text",
+              "name": "Paragraphe 1",
+              "settings": {
+                "text": "<p>Tout a commencé par une conviction simple : un beau bijou ne devrait pas être réservé aux grandes occasions. Il devrait se porter tous les jours, accompagner les petits moments comme les grands, et devenir peu à peu une part de soi.</p>",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "p2": {
+              "type": "text",
+              "name": "Paragraphe 2",
+              "settings": {
+                "text": "<p>Nous avons choisi le trèfle, symbole universel de chance, et l’avons décliné en sept couleurs pour que chacune et chacun trouve celui qui lui ressemble. Des pièces légères et lumineuses, pensées pour être portées seules ou accumulées.</p>",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "p3": {
+              "type": "text",
+              "name": "Paragraphe 3",
+              "settings": {
+                "text": "<p>Chaque bijou est sélectionné avec soin, présenté avec simplicité et expédié avec un numéro de suivi. Notre promesse : vous offrir l’élégance au quotidien, à un prix juste.</p>",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "cta": {
+              "type": "button",
+              "name": "Bouton",
+              "settings": {
+                "label": "Découvrir tous nos bijoux",
+                "link": "shopify://collections/all",
+                "style_class": "button-secondary"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "eyebrow",
+            "title",
+            "p1",
+            "p2",
+            "p3",
+            "cta"
+          ]
+        }
+      },
+      "block_order": [
+        "image",
+        "texte"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "gap": 48,
+        "horizontal_alignment": "flex-start",
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "background_color": "#F7F5F2",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "valeurs": {
+      "type": "section",
+      "name": "Nos valeurs",
+      "blocks": {
+        "row": {
+          "type": "group",
+          "name": "Valeurs",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "gap": 48,
+            "horizontal_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "width": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "v0": {
+              "type": "group",
+              "name": "Valeur 1",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "gap": 10,
+                "horizontal_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "h": {
+                  "type": "text",
+                  "name": "Titre",
+                  "settings": {
+                    "text": "<h3>L’élégance au quotidien</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "name": "Texte",
+                  "settings": {
+                    "text": "<p>Des bijoux délicats, faciles à porter, qui subliment chaque tenue.</p>",
+                    "width": "100%",
+                    "max_width": "narrow",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "h",
+                "p"
+              ]
+            },
+            "v1": {
+              "type": "group",
+              "name": "Valeur 2",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "gap": 10,
+                "horizontal_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "h": {
+                  "type": "text",
+                  "name": "Titre",
+                  "settings": {
+                    "text": "<h3>Le soin du détail</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "name": "Texte",
+                  "settings": {
+                    "text": "<p>Trèfles ciselés, finitions dorées, chaînes fines : chaque détail compte.</p>",
+                    "width": "100%",
+                    "max_width": "narrow",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "h",
+                "p"
+              ]
+            },
+            "v2": {
+              "type": "group",
+              "name": "Valeur 3",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "gap": 10,
+                "horizontal_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "h": {
+                  "type": "text",
+                  "name": "Titre",
+                  "settings": {
+                    "text": "<h3>Le plaisir d’offrir</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "name": "Texte",
+                  "settings": {
+                    "text": "<p>Une attention qui fait toujours mouche, pour soi ou pour ceux qu’on aime.</p>",
+                    "width": "100%",
+                    "max_width": "narrow",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "h",
+                "p"
+              ]
+            }
+          },
+          "block_order": [
+            "v0",
+            "v1",
+            "v2"
+          ]
+        }
+      },
+      "block_order": [
+        "row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "gap": 24,
+        "horizontal_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": [
+    "section",
+    "main",
+    "description",
+    "histoire",
+    "valeurs"
+  ]
+}
