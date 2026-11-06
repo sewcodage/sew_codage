@@ -1,0 +1,664 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "carousel",
+            "media_columns": "two",
+            "image_gap": 4,
+            "large_first_image": true,
+            "icons_style": "chevron",
+            "slideshow_controls_style": "dots",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "1",
+            "media_fit": "contain",
+            "media_radius": 16,
+            "zoom": true,
+            "hide_variants": true
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "details_position": "flex-start",
+            "gap": 22,
+            "sticky_details_desktop": true,
+            "padding-block-start": 24,
+            "padding-block-end": 24
+          },
+          "blocks": {
+            "header": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8
+              },
+              "blocks": {
+                "eyebrow": {
+                  "type": "custom-liquid",
+                  "name": "Sur-titre",
+                  "settings": {
+                    "custom_liquid": "<style>\n.pdp-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#a6814a;margin:0}\n.pdp-pitch{margin:0;font-size:1rem;line-height:1.6;opacity:.85}\n.pdp-points{list-style:none;padding:0;margin:.75rem 0 0;display:grid;gap:.4rem}\n.pdp-points li{display:flex;gap:.55rem;align-items:center;font-size:.92rem}\n.pdp-points li:before{content:\"\";width:6px;height:6px;border-radius:50%;background:#a6814a;flex:none}\n.pdp-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;padding:1rem 0;border-top:1px solid rgba(0,0,0,.08);border-bottom:1px solid rgba(0,0,0,.08)}\n.pdp-trust div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.35rem;font-size:.78rem;line-height:1.3}\n.pdp-trust svg{width:22px;height:22px;stroke:#a6814a;fill:none;stroke-width:1.5}\n.pdp-gift{background:#f7f2eb;border-radius:14px;padding:.85rem 1rem;font-size:.88rem;display:flex;gap:.6rem;align-items:center}\n@media(max-width:749px){.pdp-trust div{font-size:.72rem}}\n</style><p class=\"pdp-eyebrow\">Bracelet · Acier inoxydable doré</p>"
+                  },
+                  "blocks": {}
+                },
+                "title": {
+                  "type": "text",
+                  "name": "Product title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "type_preset": "h3",
+                    "font": "var(--font-primary--family)"
+                  },
+                  "blocks": {}
+                },
+                "price": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1.25rem",
+                    "padding-block-start": 4
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "eyebrow",
+                "title",
+                "price"
+              ],
+              "name": "Header"
+            },
+            "pitch": {
+              "type": "custom-liquid",
+              "name": "Accroche",
+              "settings": {
+                "custom_liquid": "<p class=\"pdp-pitch\">Cinq trèfles lumineux sur une fine chaîne dorée : le bijou porte-bonheur qui illumine chaque tenue, du quotidien aux grandes occasions.</p><ul class=\"pdp-points\"><li>7 couleurs au choix</li><li>Taille réglable 16,5 → 21,5 cm</li><li>Léger et agréable à porter : 9,9 g</li></ul>"
+              },
+              "blocks": {}
+            },
+            "variant_picker": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false
+              },
+              "blocks": {}
+            },
+            "buy_buttons": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {
+                    "input_style": "custom",
+                    "input_background_color": "{{ settings.color_palette.background }}",
+                    "input_text_color": "{{ settings.color_palette.color10 }}",
+                    "input_border_color": "{{ settings.color_palette.color11 }}"
+                  },
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button-custom",
+                    "custom_button_background": "{{ settings.color_palette.color10 }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.color10 }}"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "trust": {
+              "type": "custom-liquid",
+              "name": "Réassurance",
+              "settings": {
+                "custom_liquid": "<div class=\"pdp-trust\"><div><svg viewBox=\"0 0 24 24\"><path d=\"M3 7h11v9H3zM14 10h4l3 3v3h-7\"/><circle cx=\"7\" cy=\"17.5\" r=\"1.6\"/><circle cx=\"17\" cy=\"17.5\" r=\"1.6\"/></svg><span>Livraison<br>avec suivi</span></div><div><svg viewBox=\"0 0 24 24\"><rect x=\"5\" y=\"11\" width=\"14\" height=\"9\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 0 1 8 0v3\"/></svg><span>Paiement<br>100 % sécurisé</span></div><div><svg viewBox=\"0 0 24 24\"><path d=\"M4 12a8 8 0 1 0 3-6.2\"/><path d=\"M4 4v4h4\"/></svg><span>14 jours pour<br>changer d’avis</span></div></div>"
+              },
+              "blocks": {}
+            },
+            "gift": {
+              "type": "custom-liquid",
+              "name": "Idée cadeau",
+              "settings": {
+                "custom_liquid": "<div class=\"pdp-gift\"><span>🎁</span><span><strong>Une idée cadeau ?</strong> Un bijou qui fait toujours plaisir : anniversaire, fête des mères, Noël…</span></div>"
+              },
+              "blocks": {}
+            },
+            "infos": {
+              "type": "accordion",
+              "settings": {
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h6"
+              },
+              "blocks": {
+                "r1": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Description",
+                    "icon": "heart",
+                    "open_by_default": true
+                  },
+                  "blocks": {
+                    "t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "{{ closest.product.description }}",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t"
+                  ]
+                },
+                "r2": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Dimensions & matière",
+                    "icon": "ruler",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li><strong>Longueur :</strong> 16,5 cm + 5 cm de chaînette de rallonge</li><li><strong>Taille d’un trèfle :</strong> 1,3 cm</li><li><strong>Poids :</strong> 9,9 g</li><li><strong>Matière :</strong> acier inoxydable couleur or, trèfles en nacre colorée</li><li><strong>Fermoir :</strong> mousqueton</li></ul>",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t"
+                  ]
+                },
+                "r3": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Conseils d’entretien",
+                    "icon": "star",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Pour garder tout l’éclat de votre bracelet : retirez-le avant la douche, la baignade ou le sport, évitez le contact avec le parfum et les crèmes, et rangez-le à l’abri. Un chiffon doux et sec suffit pour le nettoyer.</p>",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t"
+                  ]
+                },
+                "r4": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Livraison & retours",
+                    "icon": "truck",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Chaque commande est expédiée avec un numéro de suivi. Le délai estimé s’affiche au moment du paiement.</p><p>Vous disposez de 14 jours après réception pour changer d’avis. Contactez-nous via la page Contact et nous vous guidons.</p>",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t"
+                  ]
+                }
+              },
+              "block_order": [
+                "r1",
+                "r2",
+                "r3",
+                "r4"
+              ]
+            }
+          },
+          "block_order": [
+            "header",
+            "pitch",
+            "variant_picker",
+            "buy_buttons",
+            "trust",
+            "gift",
+            "infos"
+          ]
+        }
+      },
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "gap": 48,
+        "enable_sticky_add_to_cart": true,
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "padding-block-start": 48,
+        "padding-block-end": 0
+      }
+    },
+    "promesses": {
+      "type": "section",
+      "name": "t:names.custom_section",
+      "blocks": {
+        "box": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "toggle_overlay": true,
+            "overlay_color": "#f7f2eb",
+            "overlay_style": "solid",
+            "border_radius": 24,
+            "padding-block-start": 48,
+            "padding-block-end": 48,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
+          },
+          "blocks": {
+            "cols": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "gap": 64,
+                "horizontal_alignment": "center",
+                "padding-block-start": 24,
+                "padding-block-end": 24
+              },
+              "blocks": {
+                "c1": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 12,
+                    "horizontal_alignment_flex_direction_column": "center"
+                  },
+                  "blocks": {
+                    "i": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "heart",
+                        "width": 32
+                      },
+                      "blocks": {}
+                    },
+                    "h": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Élégance au quotidien</h3>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h3",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem"
+                      },
+                      "blocks": {}
+                    },
+                    "p": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Un bijou délicat qui sublime aussi bien un jean qu’une robe de soirée.</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1.25rem"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "i",
+                    "h",
+                    "p"
+                  ]
+                },
+                "c2": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 12,
+                    "horizontal_alignment_flex_direction_column": "center"
+                  },
+                  "blocks": {
+                    "i": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "star",
+                        "width": 32
+                      },
+                      "blocks": {}
+                    },
+                    "h": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Pensé pour durer</h3>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h3",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem"
+                      },
+                      "blocks": {}
+                    },
+                    "p": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Acier inoxydable couleur or : une base solide, pour un bijou que l’on porte tous les jours.</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1.25rem"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "i",
+                    "h",
+                    "p"
+                  ]
+                },
+                "c3": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 12,
+                    "horizontal_alignment_flex_direction_column": "center"
+                  },
+                  "blocks": {
+                    "i": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "silhouette",
+                        "width": 32
+                      },
+                      "blocks": {}
+                    },
+                    "h": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Le cadeau qui fait mouche</h3>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h3",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem"
+                      },
+                      "blocks": {}
+                    },
+                    "p": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>7 couleurs pour trouver celle qui lui ressemble.</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1.25rem"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "i",
+                    "h",
+                    "p"
+                  ]
+                }
+              },
+              "block_order": [
+                "c1",
+                "c2",
+                "c3"
+              ]
+            }
+          },
+          "block_order": [
+            "cols"
+          ]
+        }
+      },
+      "block_order": [
+        "box"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "padding-block-start": 48,
+        "padding-block-end": 0
+      }
+    },
+    "porte": {
+      "type": "section",
+      "name": "t:names.image_with_text",
+      "blocks": {
+        "img": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bracelet-trefle-porte.jpg",
+            "image_ratio": "square",
+            "border_radius": 24
+          },
+          "blocks": {}
+        },
+        "txt": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 12,
+            "width": "custom",
+            "custom_width": 100
+          },
+          "blocks": {
+            "h": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Le trèfle, votre porte-bonheur</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem"
+              },
+              "blocks": {}
+            },
+            "p": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Symbole de chance depuis toujours, le trèfle se porte seul pour une touche discrète ou s’accumule avec vos autres bracelets pour un effet plus affirmé.</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1.25rem"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h",
+            "p"
+          ]
+        }
+      },
+      "block_order": [
+        "img",
+        "txt"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "vertical_alignment": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "details": {
+      "type": "section",
+      "name": "t:names.image_with_text",
+      "blocks": {
+        "img": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bracelet-trefle-details.jpg",
+            "image_ratio": "square",
+            "border_radius": 24
+          },
+          "blocks": {}
+        },
+        "txt": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 12,
+            "width": "custom",
+            "custom_width": 100
+          },
+          "blocks": {
+            "h": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Les détails font la différence</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem"
+              },
+              "blocks": {}
+            },
+            "p": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Trèfles ciselés de 1,3 cm, chaîne fine et chaînette de rallonge de 5 cm : il s’ajuste à tous les poignets et reste léger toute la journée.</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1.25rem"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h",
+            "p"
+          ]
+        }
+      },
+      "block_order": [
+        "txt",
+        "img"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "vertical_alignment": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "citation": {
+      "type": "section",
+      "name": "t:names.pull_quote",
+      "blocks": {
+        "i": {
+          "type": "icon",
+          "settings": {
+            "icon": "heart",
+            "width": 32
+          },
+          "blocks": {}
+        },
+        "q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Un bijou simple, lumineux, que l’on ne quitte plus.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "i",
+        "q"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "medium",
+        "background_color": "{{ settings.color_palette.color9 }}",
+        "padding-block-start": 100,
+        "padding-block-end": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "promesses",
+    "porte",
+    "details",
+    "citation"
+  ]
+}
