@@ -121,7 +121,7 @@ tpl = {
                     "block_order": ["header", "price", "variant_picker", "buy_buttons", "services", "infos"]},
             },
             "settings": {"content_width": "content-center-aligned", "desktop_media_position": "left", "equal_columns": False,
-                         "gap": 64, "enable_sticky_add_to_cart": True, "background_color": "#FFFFFF",
+                         "gap": 48, "enable_sticky_add_to_cart": True, "background_color": "#FFFFFF",
                          "padding-block-start": 0, "padding-block-end": 48}},
         "edito": custom_section("Histoire du trèfle", EDITO, 96, 96, "#F7F5F2"),
         "services": custom_section("Services", BAND, 72, 72),

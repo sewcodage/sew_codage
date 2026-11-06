@@ -219,7 +219,7 @@
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
         "equal_columns": false,
-        "gap": 64,
+        "gap": 48,
         "enable_sticky_add_to_cart": true,
         "background_color": "#FFFFFF",
         "padding-block-start": 0,
